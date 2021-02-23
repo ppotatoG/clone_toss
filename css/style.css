@@ -118,3 +118,20 @@ header .menu-wrap li a:hover{background: #999;}
     #moblie-cta{display: none;}
     #main .pc-cta{display: block;}
 }
+
+#footer{background: #f9fafb; padding: 5rem;}
+#footer a{display: inline-block;}
+#footer a:hover{text-decoration: underline;}
+
+#footer .service ul{margin-top:3rem;}
+#footer .service ul:first-child{margin-top:0;}
+#footer h3{font-weight: 500; margin-bottom: 1.5rem;}
+#footer .service ul li{height: 3rem; line-height: 3rem;}
+
+
+#footer .sns-wrap{display: flex;}
+#footer .sns-wrap li{margin-left: 1rem; width: 35px; height: 35px;}
+#footer .sns-wrap li:first-child{margin-left: 0rem;}
+
+#footer .sns-wrap li:hover img{opacity: 1;}
+#footer .sns-wrap li img{transition: opacity .2s; opacity: .7;}
