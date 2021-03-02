@@ -92,14 +92,13 @@ header .menu-wrap li a:hover{background: #999;}
 
 #main{
     background: url(../images/hero-handset-new.jpg) center center no-repeat scroll;
-    width: 100%; height: calc(100vh - 60px); position: relative;}
+    width: 100%; height: calc(100vh - 60px); position: relative; padding: 0;}
 #main h2{font-size: 3rem; font-weight: 600; color: #000; text-align: center; padding: 3rem 0;}
 #main .pc-cta{display: none;}
 #main button{
     width: 2rem; animation: cta-animation 1s ease-in-out infinite;
     position: absolute; left: calc(50% - 1rem); bottom: 5rem;}
 #main button img{width: 100%; height: auto;}
-
 
 
 @keyframes cta-animation{
@@ -118,6 +117,29 @@ header .menu-wrap li a:hover{background: #999;}
     #moblie-cta{display: none;}
     #main .pc-cta{display: block;}
 }
+
+section{padding: 8rem 0; box-sizing: border-box; overflow: hidden;}
+section .text-box{width: 70%; margin: 0 auto; text-align: center;}
+section .text-box h3{font-weight: 600; font-size: 2.4rem;}
+section .text-box a{color: #3182f6; font-weight: 500;}
+
+section .tab-area figure{width: 70%; margin: 0 auto; position: relative;}
+section .tab-area .inner-contents{
+    width: 55%; padding: 8rem;}
+section .tab-area .inner-contents img{
+    width: 194px; z-index: -1;
+    position: absolute; top: 57px; right: -102px;}
+section .tab-area .inner-contents img.on{right: 92px;}
+section .tab-area .tab-menu ul{
+    width: 60%; margin: 0 auto;
+    display: flex; justify-content: space-between;}
+section .tab-area .tab-menu ul li.on{color: red;}
+
+#certification .ani-box >div{
+    background-color: #fff; width: 50%; margin: 0 auto; border-radius: 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    box-sizing: border-box; padding: 2rem; margin-top: 2rem;}
+#certification .ani-box >div figure{max-width: 2.4rem;}
 
 #footer{background: #f9fafb; padding: 5rem;}
 #footer a{display: inline-block;}

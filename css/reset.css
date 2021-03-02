@@ -50,5 +50,6 @@ button, input{outline: none; border: none;}
 
 html{font-size: 10px;}
 a, span, p, button, label, h1, h2, h3, h4, h5, h6, figcaption, li{
-    color: #323232; font-size: 1.6rem; font-weight: 300; 
-    font-family: 'Noto Sans KR', 'Roboto', sans-serif; letter-spacing: -.05rem;}
+    color: #323232; font-size: 1.6rem;
+	font-family: 'Noto Sans KR', 'Roboto', sans-serif; letter-spacing: -.05rem;}
+img{width: 100%;}
