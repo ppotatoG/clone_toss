@@ -30,24 +30,22 @@ function MenuToggle(){
 */
 
 let tabBtn=document.querySelectorAll('.tab-menu li'),
-    tabImg=document.querySelectorAll('.inner-contents img');
+    tabImg=document.querySelectorAll('.inner-contents img'),
+    tabmessage=document.querySelector('.tab-area .tab-message');
 
 for(let i=0; i<tabBtn.length; i++){
     tabBtn[i].addEventListener('click', function(){
-        console.log(i)
-        console.log(tabBtn[i])
-        console.log(tabImg[i])
-
-        tabBtn[i].classList.remove('on')
-        tabImg[i].classList.remove('on')
-
+        for(let n=0; n<tabBtn.length; n++){
+            tabBtn[n].classList.remove('on')
+            tabImg[n].classList.remove('on')
+        }
         const dataSet=this.dataset.tabmsg
-
         if(this.classList!=="on"){
             this.classList.add('on')
             document.querySelector('.'+dataSet).classList.add('on')
         }
-        
+        if(dataSet=='contacts') tabmessage.textContent="계좌번호를 몰라도 연락처만으로 송금할 수 있습니다."
+        else if(dataSet=='sagi') tabmessage.textContent="송금하는 계좌에 피해 사례가 있는지 확인할 수 있습니다."
+        else if(dataSet=='message') tabmessage.textContent="받는분에게 마음을 전해보세요"
     })
 }
-//중복 꼬엿다!

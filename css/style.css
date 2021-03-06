@@ -118,23 +118,21 @@ header .menu-wrap li a:hover{background: #999;}
     #main .pc-cta{display: block;}
 }
 
-section{padding: 8rem 0; box-sizing: border-box; overflow: hidden;}
-section .text-box{width: 70%; margin: 0 auto; text-align: center;}
-section .text-box h3{font-weight: 600; font-size: 2.4rem;}
-section .text-box a{color: #3182f6; font-weight: 500;}
+section{padding: 8rem 0; box-sizing: border-box; overflow: hidden; text-align: center;}
+section h3{font-weight: 600; font-size: 2.4rem;}
+section a{color: #3182f6; font-weight: 500;}
 
-section .tab-area figure{width: 70%; margin: 0 auto; position: relative;}
-section .tab-area .inner-contents{
-    width: 55%; padding: 8rem;}
+section .tab-area figure{
+    overflow: hidden; width: 70%; margin: 0 auto; position: relative;}
 section .tab-area .inner-contents img{
-    width: 194px; z-index: -1;
+    width: 194px; z-index: -1; transition: right .2s;
     position: absolute; top: 57px; right: -102px;}
 section .tab-area .inner-contents img.on{right: 92px;}
 section .tab-area .tab-menu ul{
     width: 60%; margin: 0 auto;
     display: flex; justify-content: space-between;}
 section .tab-area .tab-menu ul li.on{color: red;}
-
+/* position과 z-index */
 #certification .ani-box >div{
     background-color: #fff; width: 50%; margin: 0 auto; border-radius: 2rem;
     display: flex; justify-content: space-between; align-items: center;
