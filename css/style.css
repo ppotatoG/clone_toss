@@ -1,10 +1,11 @@
 @charset "urf-8";
-body{background: silver;}
 #wrap{position: relative;}
 header{
-    width: 100%; height: 60px; background: #fff; 
-    padding: 2rem; box-sizing: border-box; position: relative;
+    width: 100%; height: 60px; 
+    position: fixed; top: 0; left: 0; z-index: 1;
+    transition: background-color .2s; padding: 2rem; box-sizing: border-box;
     display: flex; justify-content: space-between; align-items: center;}
+header.fix{ background: #fff;}
 header .logo{width: 78px;}
 header .menu-toggle{
     position: relative; width: 20px; height: 100%;}
@@ -86,18 +87,21 @@ header .menu-wrap li a{
 header .menu-wrap li a:hover{background: #999;}
 
 #moblie-cta{
-    position: absolute; bottom: 10rem; left: calc(50% - 40%); border-radius: 2rem;
+    position: absolute; left: calc(50% - 40%); border-radius: 2rem;
     background: #3182f6; width: 80%; height: 58px; line-height: 58px; box-sizing: border-box;
-    font-size: 2rem; color: #fff; font-weight: 500; text-align: center;}
+    font-size: 2rem; color: #fff; font-weight: 500; text-align: center;
+    z-index: 1;}
+header.fix+#moblie-cta{
+    width: 100%; left: 0; position: fixed;}
 
 #main{
     background: url(../images/hero-handset-new.jpg) center center no-repeat scroll;
-    width: 100%; height: calc(100vh - 60px); position: relative; padding: 0;}
+    width: 100%; height: 100vh; position: relative; padding: 0;}
 #main h2{font-size: 3rem; font-weight: 600; color: #000; text-align: center; padding: 3rem 0;}
 #main .pc-cta{display: none;}
 #main button{
     width: 2rem; animation: cta-animation 1s ease-in-out infinite;
-    position: absolute; left: calc(50% - 1rem); bottom: 5rem;}
+    position: absolute; left: calc(50% - 1rem); bottom: 30px;}
 #main button img{width: 100%; height: auto;}
 
 
@@ -119,15 +123,21 @@ header .menu-wrap li a:hover{background: #999;}
 }
 
 section{padding: 8rem 0; box-sizing: border-box; overflow: hidden; text-align: center;}
+section:nth-child(even){background-color: #eee;}
 section h3{font-weight: 600; font-size: 2.4rem;}
 section a{color: #3182f6; font-weight: 500;}
 
 section .tab-area figure{
     overflow: hidden; width: 70%; margin: 0 auto; position: relative;}
+section .tab-area figure >img{width: 400px;}
+section .tab-area .inner-contents{
+    display: flex; justify-content: center;
+    width: 100%; height: 100%; position: absolute; top: 0; right: 0;}
 section .tab-area .inner-contents img{
-    width: 194px; z-index: -1; transition: right .2s;
-    position: absolute; top: 57px; right: -102px;}
-section .tab-area .inner-contents img.on{right: 92px;}
+    width: 206px; z-index: -1; transition: right .2s;
+    position: absolute; top:  61px; right: -120px;}
+section .tab-area .inner-contents img.on{right: calc(50% - 100px);}
+/* trnasition: right, z-index */
 section .tab-area .tab-menu ul{
     width: 60%; margin: 0 auto;
     display: flex; justify-content: space-between;}

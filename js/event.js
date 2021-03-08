@@ -1,18 +1,25 @@
-let once={once: true};
+let header = document.querySelector("header"),
+    sticky = header.offsetTop,
+    MobileCTA=document.querySelector('#moblie-cta'),
+    screenHeight= window.innerHeight,
+    CTAHeight= MobileCTA.offsetHeight;
+
+//onscroll은 뭐죠 addEventListenr랑 달라여?
+function headerFunction() {
+    if (window.pageYOffset > sticky) {
+    header.classList.add("fix")
+    MobileCTA.style.bottom=0+"px"
+    } else {
+    header.classList.remove("fix");
+    MobileCTA.style.top=screenHeight-CTAHeight-80+"px"
+    }
+}
 
 window.onscroll = function() {headerFunction()};
 
-let header = document.querySelector("header"),
-    sticky = header.offsetTop;
-
-
-function headerFunction() {
-    if (window.pageYOffset > sticky) {
-    header.classList.add("fix");
-    } else {
-    header.classList.remove("fix");
-    }
-}
+window.addEventListener('load', ()=>{
+    MobileCTA.style.top=screenHeight-CTAHeight-80+"px"
+});
 
 function MenuToggle(){
     document.querySelector('.menu-toggle').classList.toggle('on')
