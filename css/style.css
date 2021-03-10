@@ -87,33 +87,32 @@ header .menu-wrap li a{
 header .menu-wrap li a:hover{background: #999;}
 
 #moblie-cta{
-    position: absolute; left: calc(50% - 40%); border-radius: 2rem;
-    background: #3182f6; width: 80%; height: 58px; line-height: 58px; box-sizing: border-box;
-    font-size: 2rem; color: #fff; font-weight: 500; text-align: center;
-    z-index: 1;}
+    position: fixed; left: calc(50% - 40%); border-radius: 1rem;
+    background: #3182f6; width: 80%; height: 56px; line-height: 56px; box-sizing: border-box;
+    font-size: 1.8rem; color: #fff; font-weight: 500; text-align: center;
+    z-index: 1; transition: all .2s;}
 header.fix+#moblie-cta{
-    width: 100%; left: 0; position: fixed;}
-
+    width: 100%; left: 0; border-radius: 0;}
+header.fix ~footer{margin-bottom: 56px;}
 #main{
     background: url(../images/hero-handset-new.jpg) center center no-repeat scroll;
     width: 100%; height: 100vh; position: relative; padding: 0;}
-#main h2{font-size: 3rem; font-weight: 600; color: #000; text-align: center; padding: 3rem 0;}
+#main h2{font-size: 3rem; font-weight: 600; color: #000; text-align: center; padding-top: 10rem;}
 #main .pc-cta{display: none;}
-#main button{
+#main >a{
     width: 2rem; animation: cta-animation 1s ease-in-out infinite;
-    position: absolute; left: calc(50% - 1rem); bottom: 30px;}
-#main button img{width: 100%; height: auto;}
-
+    position: absolute; left: calc(50% - 1rem); bottom: 2rem;}
+#main >a img{width: 100%; height: auto;}
 
 @keyframes cta-animation{
     0%{
-        bottom: 5rem; opacity: 1;
+        bottom: 3rem; opacity: 1;
     }
     50%{
-        bottom: 4rem; opacity: .2;
+        bottom: 2rem; opacity: .2;
     }
     100%{
-        bottom: 5rem; opacity: 1;
+        bottom: 3rem; opacity: 1;
     }
 }
 
@@ -125,7 +124,9 @@ header.fix+#moblie-cta{
 section{padding: 8rem 0; box-sizing: border-box; overflow: hidden; text-align: center;}
 section:nth-child(even){background-color: #eee;}
 section h3{font-weight: 600; font-size: 2.4rem;}
+section h3+p, section p+a{margin-top: 3rem;}
 section a{color: #3182f6; font-weight: 500;}
+
 
 section .tab-area figure{
     overflow: hidden; width: 70%; margin: 0 auto; position: relative;}

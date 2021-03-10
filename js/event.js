@@ -1,8 +1,6 @@
 let header = document.querySelector("header"),
     sticky = header.offsetTop,
-    MobileCTA=document.querySelector('#moblie-cta'),
-    screenHeight= window.innerHeight,
-    CTAHeight= MobileCTA.offsetHeight;
+    MobileCTA=document.querySelector('#moblie-cta');
 
 //onscroll은 뭐죠 addEventListenr랑 달라여?
 function headerFunction() {
@@ -11,14 +9,14 @@ function headerFunction() {
     MobileCTA.style.bottom=0+"px"
     } else {
     header.classList.remove("fix");
-    MobileCTA.style.top=screenHeight-CTAHeight-80+"px"
+    MobileCTA.style.bottom=60+"px"
     }
 }
 
 window.onscroll = function() {headerFunction()};
 
 window.addEventListener('load', ()=>{
-    MobileCTA.style.top=screenHeight-CTAHeight-80+"px"
+    MobileCTA.style.bottom=60+"px"
 });
 
 function MenuToggle(){
