@@ -16,7 +16,13 @@ function headerFunction() {
 window.onscroll = function() {headerFunction()};
 
 window.addEventListener('load', ()=>{
-    MobileCTA.style.bottom=60+"px"
+    if (window.pageYOffset > sticky) {
+        header.classList.add("fix")
+        MobileCTA.style.bottom=0+"px"
+    } else {
+        header.classList.remove("fix");
+        MobileCTA.style.bottom=60+"px"
+    }
 });
 
 function MenuToggle(){
@@ -54,3 +60,11 @@ for(let i=0; i<tabBtn.length; i++){
         else if(dataSet=='message') tabmessage.textContent="받는분에게 마음을 전해보세요"
     })
 }
+$('.counter-20').counterUp({
+    delay: 10,
+    time: 2000
+});
+$('.counter-25').counterUp({
+    delay: 10,
+    time: 2500
+});
