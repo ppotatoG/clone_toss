@@ -133,11 +133,28 @@ section a{color: #3182f6; font-weight: 500;}
     #moblie-cta{display: none;}
     #main .pc-cta{display: block;}
 }
+#security{
+    background-image: url(../images/confetti.png); background-size: 90%;
+    background-position: center bottom; background-repeat: no-repeat;
+    animation: confetti-animation 1s ease-in-out;}
+@keyframes confetti-animation{
+    0%{
+        opacity: .2;
+        background-size: 10%;
+        background-position: center bottom;
+    }
+
+    100%{
+        opacity: 1;
+        background-size: 90%;
+        background-position: center bottom;
+    }
+}
 #security ul{
-    width: 80%; margin: 0 auto;
+    width: 90%; margin: 0 auto;
     display: flex; justify-content: center; flex-wrap: wrap;}
-#security ul li{max-width: 170px;}
-#security ul li a{box-sizing: border-box; padding: 1rem;}
+#security ul li{max-width: 150px;}
+#security ul li a{box-sizing: border-box; padding: .5rem;}
 #security ul li a:hover img{opacity: 1;}
 #security ul li a img{opacity: .7; transition: .2s}
 #security p span{font-size: 2.4rem; margin-top: .5rem;}
