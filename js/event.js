@@ -68,3 +68,13 @@ $('.counter-25').counterUp({
     delay: 10,
     time: 2500
 });
+
+window.addEventListener('load', function(){
+    if(window.innerWidth>786) document.querySelector('#wrap').classList.add('pc')
+    else document.querySelector('#wrap').classList.remove('pc')
+})
+
+window.addEventListener('resize', function(){
+    if(window.innerWidth>786) document.querySelector('#wrap').classList.add('pc')
+    else document.querySelector('#wrap').classList.remove('pc')
+})
