@@ -391,19 +391,28 @@ section .tab-message+a {margin-top: 3rem;}
         color: #fff; 
         font-size: 5rem; 
         text-align: left;
+        padding-top: 0;
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
     }
 
     #main .pc-cta {
         display: flex; 
-        margin-top: 2rem;
+        align-items: flex-end;
+        height: 7rem;
+        margin: 2rem auto 0;
+        width: 80%;
+        max-width: 1000px;
     }
     #main .pc-cta li:first-child {margin-left: 0rem;}
-    #main .pc-cta li {margin-left: 2rem;}
+    #main .pc-cta li {margin-left: 2rem; transition: margin .2s;}
+    #main .pc-cta li:hover{margin-bottom: .2rem;}
     #main .pc-cta li a {
         color: #fff; 
         font-size: 2rem; 
-        border: 2px solid #fff; 
-        border-radius: 1rem;
+        border: 1px solid #fff; 
+        border-radius: .5rem;
         padding: 1rem 2rem; 
         display: flex; 
         align-items: center;
