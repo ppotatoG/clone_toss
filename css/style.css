@@ -16,115 +16,197 @@ header {
 
 header.fix { background: #fff;}
 header .logo {width: 78px;}
+
 header .menu-toggle {
-    position: relative; 
-    width: 20px; 
-    height: 100%;
+    border: none; 
+    outline: none;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
 }
 
-header .menu-toggle span {
-    position: absolute; 
-    animation-duration: .5s; 
-    width: 100%;
+header .menu-toggle span{
+    width: 100%; 
     height: 2px; 
-    background: silver;
-}
-header .menu-toggle span:nth-child(1) {
-    top: 0; 
-    animation-name: toggle01;
-}
-header .menu-toggle span:nth-child(2) {top: calc(50% - 1px);}
-header .menu-toggle span:nth-child(3) {
-    bottom: 0px; 
-    animation-name: toggle02;
-}
-    
-header .menu-toggle.on span {
-    width: 125%; 
-    left: -3px;
-}
-header .menu-toggle.on span:nth-child(1) {
-    animation-name:  menu-toggle01; 
-    transform: rotate(45deg); 
-    top: 9px;
-}
-header .menu-toggle.on span:nth-child(2) {visibility: hidden;}
-header .menu-toggle.on span:nth-child(3) {
-    animation-name:  menu-toggle03;; 
-    transform: rotate(-45deg); 
-    bottom: 9px;
-}
-@keyframes menu-toggle01 {
-    0%{
-        top: 0;
-        transform: rotate(0deg);
-    }
-    25%{
-        top: calc(50% - 1px);
-    }
-    75%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(45deg);
-        top: 9px;
-    }
+    background-color: #999; 
+    display: block;
+    position: absolute;
+    left: 0;
+    transform-origin: center center;
 }
 
-@keyframes menu-toggle03 {
-    0%{
-        bottom: 0px;
-        transform: rotate(0deg);
-    }
-    25%{
-        bottom: calc(50% - 1px);
-    }
-    75%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(-45deg);
-        bottom: 9px;
-    }
+button.on .one {
+    animation: one .5s;
+    transform: rotate(45deg);
+    top: 10px;
+    width: 140%;
+    left: -3.5px;
 }
-
-@keyframes toggle02 {
+button .one {
+    animation: one-out .5s;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+@keyframes one {
     0% {
-        bottom: calc(50% - 1px);
-        transform: rotate(-45deg);
+        transform: rotate(0);
+        width: 100%;
+        top: 0;
+        left: 0;
+        }
+    60% {
+        transform: rotate(0);
+        width: 100%;
+        top: 50%; 
+        left: 0;
+        }
+    100% {
+        transform: rotate(45deg);
+        width: 140%; 
+        top: 50%;
+        left: -3.5px;
     }
-    25% {
-        bottom: calc(50% - 1px);
-        transform: rotate(-45deg);
+}
+@keyframes one-out {
+    0% {
+        transform: rotate(45deg);
+        top: 50%;
+        width: 140%; 
+        left: -3.5px;
     }
-    75% {
-        bottom: calc(50% - 1px);
-        transform: rotate(-45deg);
+    60% {
+        transform: rotate(0);
+        top: 50%;
+        width: 100%;
+        left: 0;
     }
     100% {
-        transform: rotate(0deg);
-        bottom: 0;
+        transform: rotate(0);
+        top: 0;
+        width: 100%;
+        left: 0;
+    }
+}
+
+button .two{
+    animation: two-out .5s;
+    top: calc(50% - 1px);
+    left: 0%;
+}
+button.on .two{
+    animation: two .5s;
+    top: calc(50% - 1px);
+    left: 100%;
+}
+@keyframes two {
+    0% {
+        left: 0%;
+    }
+    60% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@keyframes two-out {
+    0% {
+        left: 100%;
+    }
+    60% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+button.on .three {
+    animation: three .5s;
+    transform: rotate(-45deg);
+    bottom: 50%;
+    width: 140%;
+    left: -3.5px;
+}
+button .three {
+    animation: three-out .5s;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+}
+@keyframes three {
+    0% {
+        transform: rotate(0);
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        }
+    60% {
+        transform: rotate(0);
+        width: 100%;
+        bottom: 50%;
+        left: 0px;
+        }
+    100% {
+        transform: rotate(-45deg);
+        width: 140%; 
+        bottom: 10px;
+        left: -3.5px;
+    }
+}
+@keyframes three-out {
+    0% {
+        transform: rotate(-45deg);
+        bottom: 50%;
+        width: 140%; 
+        left: 0px;
+    }
+    60% {
+        transform: rotate(0);
+        bottom: 50%;
+        width: 100%;
+        left: 0px;
+    }
+    100% {
+        transform: rotate(0);
+        bottom: 0px;
+        width: 100%;
+        left: 0px;
     }
 }
 
 header .menu-wrap {
     width: 100%; 
     position: absolute; 
-    top: 60px; 
-    left: 0; 
-    display: none;
+    top: 40px;
+    right: 0; 
+    visibility: hidden;
+    transition: top .2s;
+    transition: none;
 }
-header .menu-wrap ul {padding: 2rem 0;}
+header .menu-wrap ul {
+    padding-bottom: 1rem;
+    background: #fff; 
+}
 header .menu-wrap ul li {height: 48px;}
 header .menu-wrap li a {
     width: 100%; 
     height: 100%; 
-    background: #fff; 
     padding-left: 4rem; 
     box-sizing: border-box; 
     line-height: 48px;
+    font-weight: 300;
 }
-header .menu-wrap li a:hover {background: #999;}
+header .menu-wrap li a:hover {background: #eee;}
+
+header.fix .menu-wrap{background: #fff;}
+header .menu-toggle.on+.menu-wrap {
+    visibility: visible;
+    top: 60px;
+}
 
 #moblie-cta {
     position: fixed; 
@@ -378,6 +460,23 @@ section .tab-message+a {margin-top: 3rem;}
 #footer .sns-wrap li:first-child {margin-left: 0rem;}
 
 @media all and (min-width:768px) {
+    header h1{left: 10%;}
+    header .menu-toggle {display: none;}
+    header .menu-wrap {
+        top: .3rem;
+        right: 3%;
+        max-width: 500px;
+    }
+    header .menu-wrap ul {
+        visibility: visible;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+    }
+    header .menu-wrap li a {padding: 0 1rem;}
+    header .menu-wrap li a:hover {background: transparent;}
+
+
     #moblie-cta {display: none;}
 
     #main {
