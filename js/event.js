@@ -25,15 +25,15 @@
 //     }
 // });
 
-let toggleMenuBtn=document.querySelector('.menu-toggle');
-console.log(toggleMenuBtn)
+// let toggleMenuBtn=document.querySelector('.menu-toggle');
+// console.log(toggleMenuBtn)
 
-toggleMenuBtn.addEventListener('click', function(){
-    this.classList.toggle('on')
+// toggleMenuBtn.addEventListener('click', function(){
+//     this.classList.toggle('on')
 
-    if(this.classList.contains('on')) header.classList.add('mo-toggle-on')
-    else header.classList.remove('mo-toggle-on')
-});
+//     if(this.classList.contains('on')) header.classList.add('mo-toggle-on')
+//     else header.classList.remove('mo-toggle-on')
+// });
 
 // function headerBg(){
 //     const toggleMenu=document.querySelector('.menu-toggle');
@@ -56,9 +56,13 @@ toggleMenuBtn.addEventListener('click', function(){
 }
 */
 
-let tabBtns=document.querySelectorAll('.tab-menu li'),
+let tabBtn=document.querySelectorAll('.tab-menu li'),
     tabImg=document.querySelectorAll('.inner-contents img'),
     tabmessage=document.querySelector('.tab-area .tab-message');
+
+const tabMenu = document.querySelector('.tab-menu');
+
+
 
 // for(let i=0; i<tabBtn.length; i++){
 //     tabBtn[i].addEventListener('click', function(){
@@ -76,25 +80,54 @@ let tabBtns=document.querySelectorAll('.tab-menu li'),
 //         else if(dataSet=='message') tabmessage.textContent="받는분에게 마음을 전해보세요"
 //     })
 // }
+
+for( const tabs of tabBtn ){
+    tabs.addEventListener('click', function(){
+        for(let n=0; n<tabBtn.length; n++){
+            tabBtn[n].classList.remove('on')
+            tabImg[n].classList.remove('on')
+        }
+        const dataSet=this.dataset.tabmsg
+        if(this.classList!=="on"){
+            this.classList.add('on')
+            document.querySelector('.'+dataSet).classList.add('on')
+        }
+        if(dataSet=='contacts') tabmessage.textContent="계좌번호를 몰라도 연락처만으로 송금할 수 있습니다."
+        else if(dataSet=='sagi') tabmessage.textContent="송금하는 계좌에 피해 사례가 있는지 확인할 수 있습니다."
+        else if(dataSet=='message') tabmessage.textContent="받는분에게 마음을 전해보세요"
+    })
+}
+
+
+
 // console.dir(tabBtns)
 
 // for( const tabBtn of tabBtns ){
 //     tabBtn.addEventListener('click', function(){
 //     })
 // }
-let Wrap = document.querySelector('#wrap')
-Wrap.addEventListener('click', function(e){
-    console.dir(e)
-    if( e.target.li ) console.log('ddd')
-})
+// let Wrap = document.querySelector('#wrap')
+
+// Wrap.addEventListener('click', function(e){
+//     const tabTrue = e.target.dataset.tab;
+//     const tabTrueParent = e.target.parentNode;
+
+//     for(const tabs of tabTrueParent.children){
+//         tabs.classList.remove('on')
+//     }
+//     if(tabTrue) {
+//         e.target.classList.add('on')
+//     }
+// })
+
 
 // for( const tabBtn of tabBtns ){
 //     console.log(tabBtn)
 //     console.log(tabBtns)
 // }
-for( const i = tabBtns; i > tabBtns.length; i++){
-    console.log(tabBtns[i])
-}
+// for( const i = tabBtns; i > tabBtns.length; i++){
+//     console.log(tabBtns[i])
+// }
 
 $('.counter-20').counterUp({
     delay: 10,
