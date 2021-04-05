@@ -25,9 +25,25 @@
 //     }
 // });
 
-function MenuToggle(){
-    document.querySelector('.menu-toggle').classList.toggle('on')
-}
+let toggleMenuBtn=document.querySelector('.menu-toggle');
+console.log(toggleMenuBtn)
+
+toggleMenuBtn.addEventListener('click', function(){
+    this.classList.toggle('on')
+
+    if(this.classList.contains('on')) header.classList.add('mo-toggle-on')
+    else header.classList.remove('mo-toggle-on')
+});
+
+// function headerBg(){
+//     const toggleMenu=document.querySelector('.menu-toggle');
+//     if(toggleMenu.classList.contains='on') header.style.backgroudColor="#fff"
+//     else header.style.backgroudColor="transparent"
+
+//     console.log(header)
+//     console.log(toggleMenu.classList.contains='on')
+
+// };headerBg()
 
 //resize, onload 마다 img.alt 속성을 바꿔주나요? 그럼 같은 내용 함수를 두번?
 //클릭마다 this 잡기
@@ -95,6 +111,11 @@ window.addEventListener('load', function(){
 })
 
 window.addEventListener('resize', function(){
-    if(window.innerWidth>786) document.querySelector('#wrap').classList.add('pc')
-    else document.querySelector('#wrap').classList.remove('pc')
+    if(window.innerWidth>786) {
+        document.querySelector('#wrap').classList.add('pc')
+        header.classList.remove('mo-toggle-on')
+    } else { 
+        document.querySelector('#wrap').classList.remove('pc')
+        
+    }
 })

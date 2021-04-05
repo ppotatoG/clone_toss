@@ -6,10 +6,14 @@ header {
     position: fixed; 
     top: 0; 
     left: 0; 
-    z-index: 1;
+    z-index: 10;
     transition: background-color .2s; 
 }
-header.fix { background: #fff;}
+header.fix .header-wrap{background: #fff;}
+header.mo-toggle-on {
+    background-color: #fff;
+    transition: background-color .1s; 
+}
 header .header-wrap {
     height: 60px;
     padding: 0 2rem;
@@ -191,15 +195,16 @@ button .three {
 header .menu-wrap {
     width: 100%; 
     position: absolute; 
-    top: 40px;
+    top: -20px;
     right: 0; 
+    transition: top .2s ease-in-out;
+    z-index: -1;
     visibility: hidden;
-    transition: top .2s;
-    transition: none;
 }
 header .menu-wrap ul {
-    padding-bottom: 1rem;
     background: #fff; 
+    padding-bottom: 1rem;
+    visibility: hidden;
 }
 header .menu-wrap ul li {height: 48px;}
 header .menu-wrap li a {
@@ -214,8 +219,11 @@ header .menu-wrap li a:hover {background: #eee;}
 
 header.fix .menu-wrap{background: #fff;}
 header .menu-toggle.on+.menu-wrap {
-    visibility: visible;
     top: 60px;
+    visibility: visible;
+}
+header .menu-toggle.on+.menu-wrap ul{
+    visibility: visible;
 }
 
 #moblie-cta {
@@ -470,14 +478,18 @@ section .tab-message+a {margin-top: 3rem;}
 #footer .sns-wrap li:first-child {margin-left: 0rem;}
 
 @media all and (min-width:768px) {
+    header.fix {
+        background-color: #fff;
+        transition: background-color .2s;
+    }
     header .logo {
         left: 10%;
         background-image: url(../images/logo-white.svg);
     }
     header.fix .logo {background-image: url(../images/logo.svg);}
     header .menu-toggle {display: none;}
+    #header .menu-wrap {top: 0;}
     header .menu-wrap {
-        top: .3rem;
         right: 3%;
         max-width: 500px;
     }
