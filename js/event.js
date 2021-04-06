@@ -81,53 +81,24 @@ const tabMenu = document.querySelector('.tab-menu');
 //     })
 // }
 
-for( const tabs of tabBtn ){
-    tabs.addEventListener('click', function(){
-        for(let n=0; n<tabBtn.length; n++){
-            tabBtn[n].classList.remove('on')
-            tabImg[n].classList.remove('on')
-        }
-        const dataSet=this.dataset.tabmsg
-        if(this.classList!=="on"){
-            this.classList.add('on')
-            document.querySelector('.'+dataSet).classList.add('on')
-        }
-        if(dataSet=='contacts') tabmessage.textContent="계좌번호를 몰라도 연락처만으로 송금할 수 있습니다."
-        else if(dataSet=='sagi') tabmessage.textContent="송금하는 계좌에 피해 사례가 있는지 확인할 수 있습니다."
-        else if(dataSet=='message') tabmessage.textContent="받는분에게 마음을 전해보세요"
-    })
-}
+let Wrap = document.querySelector('#wrap')
 
+Wrap.addEventListener('click', function(e){
+    const tabTrue = e.target.dataset.tab;
+    const tabTrueParent = e.target.parentNode;
 
+    console.log(tabTrueParent.children)
 
-// console.dir(tabBtns)
+    for( const classRemoveNode of tabTrueParent.children ){
+        classRemoveNode.classList.remove('on')
+    }
 
-// for( const tabBtn of tabBtns ){
-//     tabBtn.addEventListener('click', function(){
-//     })
-// }
-// let Wrap = document.querySelector('#wrap')
-
-// Wrap.addEventListener('click', function(e){
-//     const tabTrue = e.target.dataset.tab;
-//     const tabTrueParent = e.target.parentNode;
-
-//     for(const tabs of tabTrueParent.children){
-//         tabs.classList.remove('on')
-//     }
-//     if(tabTrue) {
-//         e.target.classList.add('on')
-//     }
-// })
-
-
-// for( const tabBtn of tabBtns ){
-//     console.log(tabBtn)
-//     console.log(tabBtns)
-// }
-// for( const i = tabBtns; i > tabBtns.length; i++){
-//     console.log(tabBtns[i])
-// }
+    if(tabTrue) {
+        e.target.classList.add('on')
+        const className=e.target.dataset.tabmsg
+        document.querySelector('.'+className).classList.add('on')
+    }
+})
 
 $('.counter-20').counterUp({
     delay: 10,
