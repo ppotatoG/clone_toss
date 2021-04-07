@@ -2,7 +2,6 @@ let header = document.querySelector("header"),
     sticky = header.offsetTop,
     MobileCTA=document.querySelector('#moblie-cta');
 
-//onscroll은 뭐죠 addEventListenr랑 달라여?
 function headerFunction() {
     if (window.pageYOffset > sticky) {
     header.classList.add("fix")
@@ -81,6 +80,15 @@ Wrap.addEventListener('click', function(e){
                 break;
             case ('message') :
                 tabMsg.textContent='받는분에게 마음을 전해보세요.';
+                break;
+            case ('my') :
+                tabMsg.textContent='나는 보험료를 얼마나 똑똑하게 내고 있을까? 내 보험, 조회와 진단까지 한 번에 해보세요.';
+                break;
+            case ('return') :
+                tabMsg.textContent='귀찮아서 미뤄왔던 보험금 청구, 토스에서 간편하게 해보세요.';
+                break;
+            case ('mini') :
+                tabMsg.textContent='잠깐씩 필요한 보험부터 삶에 꼭 필요한 보장성 보험까지.나에게 필요한 미니보험을 찾아보세요.';
                 break;
             default :
                 false;
