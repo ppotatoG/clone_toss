@@ -56,13 +56,11 @@
 }
 */
 
-let tabBtn=document.querySelectorAll('.tab-menu li'),
-    tabImg=document.querySelectorAll('.inner-contents img'),
-    tabmessage=document.querySelector('.tab-area .tab-message');
+// let tabBtn=document.querySelectorAll('.tab-menu li'),
+//     tabImg=document.querySelectorAll('.inner-contents img'),
+//     tabmessage=document.querySelector('.tab-area .tab-message');
 
-const tabMenu = document.querySelector('.tab-menu');
-
-
+// const tabMenu = document.querySelector('.tab-menu');
 
 // for(let i=0; i<tabBtn.length; i++){
 //     tabBtn[i].addEventListener('click', function(){
@@ -84,18 +82,21 @@ const tabMenu = document.querySelector('.tab-menu');
 let Wrap = document.querySelector('#wrap')
 
 Wrap.addEventListener('click', function(e){
-    const tabTrue = e.target.dataset.tab;
-    const tabTrueParent = e.target.parentNode;
+    const istab = e.target.dataset.tab;
+    if(istab) {
+        const tabParent = e.target.parentNode;
+        const tabImgs = tabParent.parentNode.previousElementSibling.querySelectorAll('.inner-contents img');
 
-    console.log(tabTrueParent.children)
+        for( const tab of tabParent.children ){
+            tab.classList.remove('on')
+        }    
+        for( const tabimg of tabImgs ){
+            tabimg.classList.remove('on')
+        }
 
-    for( const classRemoveNode of tabTrueParent.children ){
-        classRemoveNode.classList.remove('on')
-    }
-
-    if(tabTrue) {
         e.target.classList.add('on')
-        const className=e.target.dataset.tabmsg
+
+        const className=e.target.dataset.tabName
         document.querySelector('.'+className).classList.add('on')
     }
 })
