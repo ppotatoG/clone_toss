@@ -9,7 +9,6 @@ header {
     z-index: 10;
     transition: background-color .2s; 
 }
-header.fix .header-wrap{background: #fff;}
 header.mo-toggle-on {
     background-color: #fff;
     transition: background-color .1s; 
@@ -378,9 +377,6 @@ section .tab-area .inner-contents {
     justify-content: center;
     width: 100%; 
     height: 100%; 
-    position: absolute; 
-    top: 0; 
-    right: 0;
 } 
 section .tab-area .inner-contents img {
     width: 208px; 
@@ -390,7 +386,10 @@ section .tab-area .inner-contents img {
     top:  61px; 
     right: -120px;
 }
-section .tab-area .inner-contents img.on {right: calc(50% - 101px);}
+section .tab-area .inner-contents img.on {
+    right: calc(50% - 101px);
+    z-index: 1;
+}
 /* trnasition: right, z-index */
 section .tab-area .tab-menu {
     Width: 70%; 
