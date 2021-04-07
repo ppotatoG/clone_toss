@@ -86,6 +86,7 @@ Wrap.addEventListener('click', function(e){
     if(istab) {
         const tabParent = e.target.parentNode;
         const tabImgs = tabParent.parentNode.previousElementSibling.querySelectorAll('.inner-contents img');
+        const tabMsg = tabParent.parentNode.nextElementSibling;
 
         for( const tab of tabParent.children ){
             tab.classList.remove('on')
@@ -98,6 +99,20 @@ Wrap.addEventListener('click', function(e){
 
         const className=e.target.dataset.tabName
         document.querySelector('.'+className).classList.add('on')
+
+        switch(className){
+            case ('contacts') :
+                tabMsg.textContent='계좌번호를 몰라도 연락처만으로 송금할 수 있습니다.';
+                break;
+            case ('sagi') :
+                tabMsg.textContent='송금하는 계좌에 피해 사례가 있는지 확인할 수 있습니다.';
+                break;
+            case ('message') :
+                tabMsg.textContent='받는분에게 마음을 전해보세요.';
+                break;
+            default :
+                false;
+        }
     }
 })
 
