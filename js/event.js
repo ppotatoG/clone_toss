@@ -1,49 +1,44 @@
-// let header = document.querySelector("header"),
-//     sticky = header.offsetTop,
-//     MobileCTA=document.querySelector('#moblie-cta');
+let header = document.querySelector("header"),
+    sticky = header.offsetTop,
+    MobileCTA=document.querySelector('#moblie-cta');
 
-// //onscroll은 뭐죠 addEventListenr랑 달라여?
-// function headerFunction() {
-//     if (window.pageYOffset > sticky) {
-//     header.classList.add("fix")
-//     MobileCTA.style.bottom=0+"px"
-//     } else {
-//     header.classList.remove("fix");
-//     MobileCTA.style.bottom=60+"px"
-//     }
-// }
+//onscroll은 뭐죠 addEventListenr랑 달라여?
+function headerFunction() {
+    if (window.pageYOffset > sticky) {
+    header.classList.add("fix")
+    MobileCTA.style.bottom=0+"px"
+    } else {
+    header.classList.remove("fix");
+    MobileCTA.style.bottom=60+"px"
+    }
+}
 
-// window.onscroll = function() {headerFunction()};
+window.onscroll = function() {headerFunction()};
 
-// window.addEventListener('load', ()=>{
-//     if (window.pageYOffset > sticky) {
-//         header.classList.add("fix")
-//         MobileCTA.style.bottom=0+"px"
-//     } else {
-//         header.classList.remove("fix");
-//         MobileCTA.style.bottom=60+"px"
-//     }
-// });
+window.addEventListener('load', ()=>{
+    if (window.pageYOffset > sticky) {
+        header.classList.add("fix")
+        MobileCTA.style.bottom=0+"px"
+    } else {
+        header.classList.remove("fix");
+        MobileCTA.style.bottom=60+"px"
+    }
+});
 
-// let toggleMenuBtn=document.querySelector('.menu-toggle');
-// console.log(toggleMenuBtn)
+let toggleMenuBtn=document.querySelector('.menu-toggle');
 
-// toggleMenuBtn.addEventListener('click', function(){
-//     this.classList.toggle('on')
+toggleMenuBtn.addEventListener('click', function(){
+    this.classList.toggle('on')
 
-//     if(this.classList.contains('on')) header.classList.add('mo-toggle-on')
-//     else header.classList.remove('mo-toggle-on')
-// });
+    if(this.classList.contains('on')) header.classList.add('mo-toggle-on')
+    else header.classList.remove('mo-toggle-on')
+});
 
-// function headerBg(){
-//     const toggleMenu=document.querySelector('.menu-toggle');
-//     if(toggleMenu.classList.contains='on') header.style.backgroudColor="#fff"
-//     else header.style.backgroudColor="transparent"
-
-//     console.log(header)
-//     console.log(toggleMenu.classList.contains='on')
-
-// };headerBg()
+function headerBg(){
+    const toggleMenu=document.querySelector('.menu-toggle');
+    if(toggleMenu.classList.contains='on') header.style.backgroudColor="#fff"
+    else header.style.backgroudColor="transparent"
+};headerBg()
 
 //resize, onload 마다 img.alt 속성을 바꿔주나요? 그럼 같은 내용 함수를 두번?
 //클릭마다 this 잡기
@@ -55,29 +50,6 @@
     delay, this(not) z-index : -
 }
 */
-
-// let tabBtn=document.querySelectorAll('.tab-menu li'),
-//     tabImg=document.querySelectorAll('.inner-contents img'),
-//     tabmessage=document.querySelector('.tab-area .tab-message');
-
-// const tabMenu = document.querySelector('.tab-menu');
-
-// for(let i=0; i<tabBtn.length; i++){
-//     tabBtn[i].addEventListener('click', function(){
-//         for(let n=0; n<tabBtn.length; n++){
-//             tabBtn[n].classList.remove('on')
-//             tabImg[n].classList.remove('on')
-//         }
-//         const dataSet=this.dataset.tabmsg
-//         if(this.classList!=="on"){
-//             this.classList.add('on')
-//             document.querySelector('.'+dataSet).classList.add('on')
-//         }
-//         if(dataSet=='contacts') tabmessage.textContent="계좌번호를 몰라도 연락처만으로 송금할 수 있습니다."
-//         else if(dataSet=='sagi') tabmessage.textContent="송금하는 계좌에 피해 사례가 있는지 확인할 수 있습니다."
-//         else if(dataSet=='message') tabmessage.textContent="받는분에게 마음을 전해보세요"
-//     })
-// }
 
 let Wrap = document.querySelector('#wrap')
 
