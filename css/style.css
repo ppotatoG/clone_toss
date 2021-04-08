@@ -62,46 +62,7 @@ button .one {
     width: 100%;
     left: 0;
 }
-@keyframes one {
-    0% {
-        transform: rotate(0);
-        width: 100%;
-        top: 0;
-        left: 0;
-        }
-    60% {
-        transform: rotate(0);
-        width: 100%;
-        top: 50%; 
-        left: 0;
-        }
-    100% {
-        transform: rotate(45deg);
-        width: 140%; 
-        top: 50%;
-        left: -3.5px;
-    }
-}
-@keyframes one-out {
-    0% {
-        transform: rotate(45deg);
-        top: 50%;
-        width: 140%; 
-        left: -3.5px;
-    }
-    60% {
-        transform: rotate(0);
-        top: 50%;
-        width: 100%;
-        left: 0;
-    }
-    100% {
-        transform: rotate(0);
-        top: 0;
-        width: 100%;
-        left: 0;
-    }
-}
+
 
 button .two{
     animation: two-out .5s;
@@ -112,28 +73,6 @@ button.on .two{
     animation: two .5s;
     top: calc(50% - 1px);
     left: 100%;
-}
-@keyframes two {
-    0% {
-        left: 0%;
-    }
-    60% {
-        left: 0%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-@keyframes two-out {
-    0% {
-        left: 100%;
-    }
-    60% {
-        left: 100%;
-    }
-    100% {
-        left: 0%;
-    }
 }
 
 button.on .three {
@@ -149,46 +88,7 @@ button .three {
     width: 100%;
     left: 0px;
 }
-@keyframes three {
-    0% {
-        transform: rotate(0);
-        width: 100%;
-        bottom: 0px;
-        left: 0px;
-        }
-    60% {
-        transform: rotate(0);
-        width: 100%;
-        bottom: 50%;
-        left: 0px;
-        }
-    100% {
-        transform: rotate(-45deg);
-        width: 140%; 
-        bottom: 10px;
-        left: -3.5px;
-    }
-}
-@keyframes three-out {
-    0% {
-        transform: rotate(-45deg);
-        bottom: 50%;
-        width: 140%; 
-        left: 0px;
-    }
-    60% {
-        transform: rotate(0);
-        bottom: 50%;
-        width: 100%;
-        left: 0px;
-    }
-    100% {
-        transform: rotate(0);
-        bottom: 0px;
-        width: 100%;
-        left: 0px;
-    }
-}
+
 
 header .menu-wrap {
     width: 100%; 
