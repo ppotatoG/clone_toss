@@ -1,4 +1,5 @@
-@import url(d:\2021\0217_toss\css\menu_animation.css);
+@charset "UTF-8";
+@import url(d:\작업\sohyun\css\menu_animation.css);
 header {
   width: 100%;
   height: 60px;
@@ -6,6 +7,7 @@ header {
   top: 0;
   left: 0;
   z-index: 10;
+  background-color: transparent;
   -webkit-transition: background-color .2s;
   transition: background-color .2s;
 }
@@ -52,5 +54,107 @@ header .menu-toggle span {
   left: 0;
   -webkit-transform-origin: center center;
           transform-origin: center center;
+}
+
+header .menu-toggle.on .one {
+  -webkit-animation: one .5s;
+          animation: one .5s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 10px;
+  width: 140%;
+  left: -3.5px;
+}
+
+header .menu-toggle .one {
+  -webkit-animation: one-out .5s;
+          animation: one-out .5s;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+header .menu-toggle .two {
+  -webkit-animation: two-out .5s;
+          animation: two-out .5s;
+  top: calc(50% - 1px);
+  left: 0%;
+}
+
+header .menu-toggle.on .two {
+  -webkit-animation: two .5s;
+          animation: two .5s;
+  top: calc(50% - 1px);
+  left: 100%;
+}
+
+header .menu-toggle.on .three {
+  -webkit-animation: three .5s;
+          animation: three .5s;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 50%;
+  width: 140%;
+  left: -3.5px;
+}
+
+header .menu-toggle .three {
+  -webkit-animation: three-out .5s;
+          animation: three-out .5s;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+}
+
+header.style {
+  background-color: #fff;
+}
+
+header .menu-wrap {
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  -webkit-transition: top .2s ease-in-out;
+  transition: top .2s ease-in-out;
+  z-index: -1;
+  visibility: hidden;
+}
+
+header .menu-wrap ul {
+  background: #fff;
+  padding-bottom: 1rem;
+  visibility: hidden;
+}
+
+header .menu-wrap ul li {
+  height: 48px;
+}
+
+header .menu-wrap ul li a {
+  width: 100%;
+  height: 100%;
+  padding-left: 4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 48px;
+  font-weight: 300;
+}
+
+header .menu-wrap ul li a:hover {
+  background: #eee;
+}
+
+header.fix .menu-wrap {
+  background: #fff;
+}
+
+header .menu-toggle.on + .menu-wrap {
+  top: 60px;
+  visibility: visible;
+}
+
+header .menu-toggle.on + .menu-wrap ul {
+  visibility: visible;
 }
 /*# sourceMappingURL=style_scss.css.map */
