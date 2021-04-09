@@ -20,16 +20,14 @@ let menuBtn=document.querySelector('.menu-toggle');
 
 menuBtn.addEventListener('click', function(){
     this.classList.toggle('on')
-    if(this.classList=='on') {
-        console.log('dd')
-    } else header.classList.remove('mo-toggle-on')
-});
 
-function headerBg(){
-    const toggleMenu=document.querySelector('.menu-toggle');
-    if(toggleMenu.classList.contains='on') header.style.backgroudColor="#fff"
-    else header.style.backgroudColor="transparent"
-};headerBg()
+    if(this.classList.contains('on')) {
+        header.classList.add('style')
+        this.classList.add('animation')
+    } else {
+        header.classList.remove('style')
+    }
+});
 
 //클릭마다 this 잡기
 //click 섹션마다 다르게 들어가야 해??? ?????
