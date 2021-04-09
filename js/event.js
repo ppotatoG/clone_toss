@@ -1,20 +1,9 @@
-let header = document.querySelector("header"),
-    sticky = header.offsetTop,
-    MobileCTA=document.querySelector('#moblie-cta');
+let header = document.querySelector("header");
+let sticky = header.offsetTop;
+let MobileCTA=document.querySelector('#moblie-cta');
+let wrap = document.querySelector('#wrap');
 
 function headerFunction() {
-    if (window.pageYOffset > sticky) {
-    header.classList.add("fix")
-    MobileCTA.style.bottom=0+"px"
-    } else {
-    header.classList.remove("fix");
-    MobileCTA.style.bottom=60+"px"
-    }
-}
-
-window.onscroll = function() {headerFunction()};
-
-window.addEventListener('load', ()=>{
     if (window.pageYOffset > sticky) {
         header.classList.add("fix")
         MobileCTA.style.bottom=0+"px"
@@ -22,15 +11,18 @@ window.addEventListener('load', ()=>{
         header.classList.remove("fix");
         MobileCTA.style.bottom=60+"px"
     }
-});
+}
 
-let toggleMenuBtn=document.querySelector('.menu-toggle');
+window.addEventListener('scroll', headerFunction)
+window.addEventListener('load', headerFunction)
 
-toggleMenuBtn.addEventListener('click', function(){
+let menuBtn=document.querySelector('.menu-toggle');
+
+menuBtn.addEventListener('click', function(){
     this.classList.toggle('on')
-
-    if(this.classList.contains('on')) header.classList.add('mo-toggle-on')
-    else header.classList.remove('mo-toggle-on')
+    if(this.classList=='on') {
+        console.log('dd')
+    } else header.classList.remove('mo-toggle-on')
 });
 
 function headerBg(){
@@ -39,7 +31,6 @@ function headerBg(){
     else header.style.backgroudColor="transparent"
 };headerBg()
 
-//resize, onload 마다 img.alt 속성을 바꿔주나요? 그럼 같은 내용 함수를 두번?
 //클릭마다 this 잡기
 //click 섹션마다 다르게 들어가야 해??? ?????
 
