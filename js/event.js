@@ -74,7 +74,16 @@ contents.addEventListener('click', function(e){
                 tabMsg.textContent='대출 상품을 간편하게 비교해보고 꼭 맞는 대출을 찾을 수 있습니다.';
                 break;
             case ('cardrecommend') :
-                tabMsg.textContent='내게 맞는 혜택을 제공하는 신용카드를 추천 받을 수 있습니다..';
+                tabMsg.textContent='내게 맞는 혜택을 제공하는 신용카드를 추천 받을 수 있습니다.';
+                break;
+            case ('dutchpay') :
+                tabMsg.textContent='더치페이할 때도 직접 계한하지 말고 쉽게 주고받으세요.';
+                break;
+            case ('atm') :
+                tabMsg.textContent='카드 없이도 ATM에서 출금할 수 있습니다.';
+                break;
+            case ('exchange') :
+                tabMsg.textContent='최대 100% 환율 우대로 저렴하게 환전할 수 있습니다.';
                 break;
             default :
                 false;
