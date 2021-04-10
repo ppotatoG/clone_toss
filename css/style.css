@@ -217,7 +217,7 @@ section a {color: #3182f6; font-weight: 500;}
     }
 }
 
-#security {
+#award {
     background-image: url(../images/confetti.png); 
     background-size: 90%;
     background-position: center bottom; 
@@ -237,28 +237,28 @@ section a {color: #3182f6; font-weight: 500;}
         background-position: center bottom;
     }
 }
-#security ul {
+#award ul {
     width: 90%; 
     margin: 0 auto;
     display: flex; 
     justify-content: center; 
     flex-wrap: wrap;
 }
-#security ul li {max-width: 150px;}
-#security ul li a {
+#award ul li {max-width: 150px;}
+#award ul li a {
     box-sizing: border-box; 
     padding: .5rem;
 }
-#security ul li a:hover img {opacity: 1;}
-#security ul li a img {
+#award ul li a:hover img {opacity: 1;}
+#award ul li a img {
     opacity: .7; 
     transition: .2s
 }
-#security p span {
+#award p span {
     font-size: 2.4rem; 
     margin-top: .5rem;
 }
-#security p span span {display: inline-block;}
+#award p span span {display: inline-block;}
 
 section .tab-area figure {
     overflow: hidden; 
