@@ -100,3 +100,16 @@
         left: 0px;
     }
 }
+@keyframes confetti-animation {
+    0%{
+        opacity: .2;
+        background-size: 10%;
+        background-position: center bottom;
+    }
+
+    100% {
+        opacity: 1;
+        background-size: 90%;
+        background-position: center bottom;
+    }
+}
