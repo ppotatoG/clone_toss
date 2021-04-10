@@ -1,6 +1,10 @@
 @charset "urf-8";
 @import "animation.css";
 
+html {scroll-behavior: smooth;}
+
+.bgFFF {background-color: #fff;}
+
 header {
     width: 100%; 
     height: 60px; 
@@ -14,7 +18,7 @@ header.mo-toggle-on {
     background-color: #fff;
     transition: background-color .1s; 
 }
-header .header-wrap {
+header .wrap {
     height: 60px;
     padding: 0 2rem;
     box-sizing: border-box;
@@ -92,7 +96,7 @@ button .three {
 }
 
 
-header .menu-wrap {
+header .menu {
     width: 100%; 
     position: absolute; 
     top: -20px;
@@ -101,13 +105,13 @@ header .menu-wrap {
     z-index: -1;
     visibility: hidden;
 }
-header .menu-wrap ul {
+header .menu ul {
     background: #fff; 
     padding-bottom: 1rem;
     visibility: hidden;
 }
-header .menu-wrap ul li {height: 48px;}
-header .menu-wrap li a {
+header .menu ul li {height: 48px;}
+header .menu li a {
     width: 100%; 
     height: 100%; 
     padding-left: 4rem; 
@@ -115,14 +119,14 @@ header .menu-wrap li a {
     line-height: 48px;
     font-weight: 300;
 }
-header .menu-wrap li a:hover {background: #eee;}
+header .menu li a:hover {background: #eee;}
 
-header.fix .menu-wrap{background: #fff;}
-header .menu-toggle.on+.menu-wrap {
+header.fix .menu{background: #fff;}
+header .menu-toggle.on+.menu {
     top: 60px;
     visibility: visible;
 }
-header .menu-toggle.on+.menu-wrap ul{
+header .menu-toggle.on+.menu ul{
     visibility: visible;
 }
 
@@ -363,24 +367,24 @@ section .tab-message+a {margin-top: 3rem;}
     }
     header.fix .logo {background-image: url(../images/logo.svg);}
     header .menu-toggle {display: none;}
-    #header .menu-wrap {top: 0;}
-    header .menu-wrap {
+    #header .menu {top: 0;}
+    header .menu {
         right: 3%;
         max-width: 500px;
     }
-    header .menu-wrap ul {
+    header .menu ul {
         visibility: visible;
         display: flex;
         justify-content: space-between;
         padding-bottom: 0;
         background-color: transparent;
     }
-    header.fix .menu-wrap {
+    header.fix .menu {
         transition: background-color .2s;
         background-color: #fff;
     }
-    header .menu-wrap li a {padding: 0 1rem;}
-    header .menu-wrap li a:hover {background: transparent;}
+    header .menu li a {padding: 0 1rem;}
+    header .menu li a:hover {background: transparent;}
 
 
     #moblie-cta {display: none;}
