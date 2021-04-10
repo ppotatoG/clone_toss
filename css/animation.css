@@ -1,3 +1,27 @@
+@keyframes cta-animation {
+    0% {
+        bottom: 3rem; opacity: 1;
+    }
+    50% {
+        bottom: 2rem; opacity: .2;
+    }
+    100% {
+        bottom: 3rem; opacity: 1;
+    }
+}
+@keyframes confetti-animation {
+    0%{
+        opacity: .2;
+        background-size: 10%;
+        background-position: center bottom;
+    }
+
+    100% {
+        opacity: 1;
+        background-size: 90%;
+        background-position: center bottom;
+    }
+}
 @keyframes one {
     0% {
         transform: rotate(0);
@@ -98,18 +122,5 @@
         bottom: 0px;
         width: 100%;
         left: 0px;
-    }
-}
-@keyframes confetti-animation {
-    0%{
-        opacity: .2;
-        background-size: 10%;
-        background-position: center bottom;
-    }
-
-    100% {
-        opacity: 1;
-        background-size: 90%;
-        background-position: center bottom;
     }
 }
