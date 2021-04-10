@@ -1,7 +1,8 @@
 let header = document.querySelector("header");
 let sticky = header.offsetTop;
-let MobileCTA=document.querySelector('#moblie-cta');
+let MobileCTA = document.querySelector('#moblie-cta');
 let wrap = document.querySelector('#wrap');
+let contents = document.querySelector('#contents');
 
 function headerFunction() {
     if (window.pageYOffset > sticky) {
@@ -22,26 +23,13 @@ menuBtn.addEventListener('click', function(){
     this.classList.toggle('on')
 
     if(this.classList.contains('on')) {
-        header.classList.add('style')
-        this.classList.add('animation')
+        header.classList.add('bgFFF')
     } else {
-        header.classList.remove('style')
+        header.classList.remove('bgFFF')
     }
 });
 
-//클릭마다 this 잡기
-//click 섹션마다 다르게 들어가야 해??? ?????
-
-/*
-딜레이{
-    click, this z-index: + margin
-    delay, this(not) z-index : -
-}
-*/
-
-let Wrap = document.querySelector('#wrap')
-
-Wrap.addEventListener('click', function(e){
+contents.addEventListener('click', function(e){
     const istab = e.target.dataset.tab;
     if(istab) {
         const tabParent = e.target.parentNode;
@@ -82,29 +70,5 @@ Wrap.addEventListener('click', function(e){
             default :
                 false;
         }
-    }
-})
-
-$('.counter-20').counterUp({
-    delay: 10,
-    time: 2000
-});
-$('.counter-25').counterUp({
-    delay: 10,
-    time: 2500
-});
-
-window.addEventListener('load', function(){
-    if(window.innerWidth>786) document.querySelector('#wrap').classList.add('pc')
-    else document.querySelector('#wrap').classList.remove('pc')
-})
-
-window.addEventListener('resize', function(){
-    if(window.innerWidth>786) {
-        document.querySelector('#wrap').classList.add('pc')
-        header.classList.remove('mo-toggle-on')
-    } else { 
-        document.querySelector('#wrap').classList.remove('pc')
-        
     }
 })
