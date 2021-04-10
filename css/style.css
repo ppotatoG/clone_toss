@@ -142,7 +142,7 @@ header .menu-toggle.on+.menu ul{
     color: #fff; 
     font-weight: 500; 
     text-align: center;
-    z-index: 1; 
+    z-index: 10; 
     transition: all .2s;
 }
 header.fix+#moblie-cta {
@@ -157,6 +157,7 @@ section {
     box-sizing: border-box; 
     overflow: hidden; 
     text-align: center;
+    background-color: #fff;
 }
 section:nth-child(even) {background-color: #eee;}
 section h3 {
@@ -164,7 +165,16 @@ section h3 {
     font-size: 2.4rem;
 }
 section h3+p, section p+a {margin-top: 3rem;}
-section a {color: #3182f6; font-weight: 500;}
+section a {
+    color: #3182f6; 
+    font-weight: 500;
+}
+section a::after{
+    content:">";
+    display: inline-block;
+    color: #3182f6;
+    margin-left: 1rem;
+}
 .round-btn {
     font-size: 1.4rem; 
     padding: 1rem 2rem; 
@@ -181,6 +191,8 @@ section a {color: #3182f6; font-weight: 500;}
     background-color: #333; 
     color: #fff;
 }
+.round-btn::after {color: #333;}
+.round-btn:hover::after {color: #fff;}
 
 #main {
     background-image: url(../images/hero-handset-new.jpg);
@@ -302,8 +314,8 @@ section .tab-area .tab-message {
 }
 section .tab-message+a {margin-top: 3rem;}
 /* position과 z-index */
-#certification .ani-box >div {
-    background-color: #fff; 
+.management .wrap >div {
+    background-color: rgb(247, 255, 231); 
     width: 50%; 
     margin: 0 auto; 
     border-radius: 2rem;
@@ -314,7 +326,37 @@ section .tab-message+a {margin-top: 3rem;}
     padding: 2rem; 
     margin-top: 2rem;
 }
-#certification .ani-box >div figure{max-width: 2.4rem;}
+.management .wrap >div figure{max-width: 2.4rem;}
+
+#toss-pay .video-wrap {
+    overflow: hidden; 
+    width: 90%; 
+    margin: 0 auto; 
+    position: relative; 
+    height: 410px;
+}
+#toss-pay figure >img {
+    width: 400px; 
+    margin: 0 auto;
+}
+#toss-pay .video-wrap >video{
+    position: absolute;
+    top: 61px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#toss-pay figure{margin: 5rem 0;}
+
+#card .wrap figure { max-width: 4rem;}
+#card .wrap >div {
+    justify-content: center;
+}
+#card .wrap >div >div {
+    width: 70%;
+    padding-left: 3rem;
+    text-align: left;
+}
 
 #footer {
     background: #f9fafb; 
