@@ -14,6 +14,7 @@ header {
     z-index: 10;
     transition: background-color .2s; 
 }
+header.fix {background-color: #fff;}
 header.mo-toggle-on {
     background-color: #fff;
     transition: background-color .1s; 
@@ -160,7 +161,6 @@ section {
     align-items: center;
     justify-content: center;
 }
-section:nth-child(even) {background-color: #eee;}
 section h3 {
     font-weight: 600; 
     font-size: 2.4rem;
@@ -176,11 +176,11 @@ a.plus::after{
     color: #3182f6;
     margin-left: 1rem;
 }
-.round-btn {
-    font-size: 1.4rem; 
+/* function(color) 로 가능하지 않을까 */
+.round-btn { 
     padding: 1rem 2rem; 
     text-align: center;
-    border-radius: 2rem; 
+    border-radius: 3rem; 
     border: 1px solid #333; 
     font-weight: 600;
     background-color: transparent;
@@ -194,7 +194,7 @@ a.plus::after{
 }
 .round-btn::after {color: #333;}
 .round-btn:hover::after {color: #fff;}
-
+.remark {font-size: 1.4rem;}
 #main {
     background-image: url(../images/hero-handset-new.jpg);
     background-size: cover; 
@@ -204,13 +204,13 @@ a.plus::after{
     height: 100vh; 
     position: relative; 
     padding: 0;
+    justify-content: flex-start;
 }
 #main h2 {
     font-size: 3.2rem; 
     font-weight: 700; 
-    color: #000; 
     text-align: center; 
-    padding-top: 10rem;
+    padding-top: 8rem;
 }
 #main .pc-cta {display: none;}
 #main >a {
@@ -228,7 +228,7 @@ a.plus::after{
     background-size: 90%;
     background-position: center bottom; 
     background-repeat: no-repeat;
-    /* animation: confetti-animation 1s ease-in-out; */
+    background-color: #fafafa;
 }
 
 #award ul {
@@ -248,12 +248,21 @@ a.plus::after{
     opacity: .7; 
     transition: .2s
 }
-#award p span {
-    font-size: 2.4rem; 
-    margin-top: .5rem;
-}
+#award p span {font-size: 3rem;}
 #award p span span {display: inline-block;}
-
+#award a.plus {
+    margin: 0;
+    border-color: #768399;
+    color: #768399; 
+}
+#award a.plus:hover {
+    border-color: #303d51;
+    background-color: #303d51;
+    color: #fff;
+}
+#award a.plus::after {color: #768399;}
+#award a.plus:hover::after {color: #fff;}
+#award .remark {margin-top: 3rem;}
 section .tab-area figure {
     overflow: hidden; 
     width: 90%; 
@@ -400,17 +409,20 @@ section .tab-message+a {margin-top: 3rem;}
 #footer .sns-wrap li:first-child {margin-left: 0rem;}
 
 @media all and (min-width:768px) {
-    header.fix {
-        background-color: #fff;
-        transition: background-color .2s;
-    }
     header .logo {
         left: 10%;
         background-image: url(../images/logo-white.svg);
     }
+    header .wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
     header.fix .logo {background-image: url(../images/logo.svg);}
     header .menu-toggle {display: none;}
-    #header .menu {top: 50px;}
+    #header .menu {
+        margin: 0;
+        position: inherit;
+    }
     header .menu {
         right: 3%;
         max-width: 500px;
@@ -426,14 +438,13 @@ section .tab-message+a {margin-top: 3rem;}
         transition: background-color .2s;
         background-color: #fff;
     }
-    header .menu li {height: 60px;}
+    header .menu ul li {height: 60px;}
     header .menu li a {
         padding: 0 1rem; 
         line-height: 60px;
     
     }
     header .menu li a:hover {background: transparent;}
-
 
     #moblie-cta {display: none;}
 
@@ -475,4 +486,12 @@ section .tab-message+a {margin-top: 3rem;}
         align-items: center;
     }
     #main .pc-cta li a img {width: auto;}
+
+    /* #award {
+
+    } */
+}
+
+@media all and (min-width:1000px) {
+    header .wrap {padding: 0;}
 }
