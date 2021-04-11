@@ -27,17 +27,22 @@ table {
 	border-spacing: 0;
 }
 
-button, input{outline: none; border: none;}
+button, input {
+	outline: none; 
+	border: none;
+}
 
-.clearfix{
-    zoom:1;}
-.clearfix::after{
+.clearfix {zoom:1;}
+.clearfix::after {
     content:"";
     display:block;
     clear:both; }
 
 html{font-size: 10px;}
 a, span, p, button, label, h1, h2, h3, h4, h5, h6, figcaption, li{
-    color: #323232; font-size: 1.6rem;
-	font-family: 'Noto Sans KR', 'Roboto', sans-serif; letter-spacing: -.05rem;}
+    color: #454f5d; 
+	font-size: 1.6rem;
+	font-family: 'Noto Sans KR', 'Roboto', sans-serif; 
+	letter-spacing: -.05rem;
+}
 img{width: 100%;}
