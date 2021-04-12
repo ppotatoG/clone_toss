@@ -162,7 +162,7 @@ section {
     overflow: hidden; 
     text-align: center;
     background-color: #fff;
-    min-height: 80vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,9 +243,7 @@ a.plus::after{
     margin: 0 auto;
     display: flex; 
     justify-content: center; 
-    flex-wrap: wrap;
 }
-#award ul li {max-width: 150px;}
 #award ul li a {
     box-sizing: border-box; 
     padding: .5rem;
@@ -255,6 +253,7 @@ a.plus::after{
     opacity: .7; 
     transition: .2s
 }
+#award p {margin-top: 4rem;}
 #award p span {font-size: 3rem;}
 #award p span span {display: inline-block;}
 #award a.plus {
@@ -269,7 +268,7 @@ a.plus::after{
 }
 #award a.plus::after {color: #768399;}
 #award a.plus:hover::after {color: #fff;}
-#award .remark {margin-top: 3rem;}
+#award .remark {margin-top: 5rem;}
 section .tab-area figure {
     overflow: hidden; 
     width: 90%; 
@@ -455,6 +454,8 @@ section .tab-message+a {margin-top: 3rem;}
 
     #moblie-cta {display: none;}
 
+    section {min-height: 80vh;}
+
     #main {
         background-image: url(../images/hero.png);
         display: flex; 
@@ -493,10 +494,6 @@ section .tab-message+a {margin-top: 3rem;}
         align-items: center;
     }
     #main .pc-cta li a img {width: auto;}
-
-    /* #award {
-
-    } */
 }
 
 @media all and (min-width:1000px) {
