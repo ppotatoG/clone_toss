@@ -35,7 +35,6 @@ header .logo {
     background-repeat: no-repeat;
     background-position: center center;
 }
-
 header .menu-toggle {
     border: none; 
     outline: none;
@@ -45,7 +44,6 @@ header .menu-toggle {
     margin: 1rem .5rem;
     overflow: hidden;
 }
-
 header .menu-toggle span{
     width: 100%; 
     height: 2px; 
@@ -55,41 +53,50 @@ header .menu-toggle span{
     left: 0;
     transform-origin: center center;
 }
-
+button .one {
+    top: 0px;
+    width: 140%;
+}
 button.on .one {
     animation: one .2s;
     transform: rotate(45deg);
-    top: 10px;
-    width: 140%;
-    left: -3.5px;
 }
-button .one {
+button.toggle02 .one {
+    width: 140%;
+    top: 9px;
+    left: -4px;
+}
+button.toggle03 .one {
     animation: one-out .2s;
     top: 0;
     width: 100%;
     left: 0;
-}
-
-
-button .two{
-    animation: two-out .2s;
-    top: calc(50% - 1px);
-    left: 0%;
 }
 button.on .two{
     animation: two .2s;
     top: calc(50% - 1px);
     left: 100%;
 }
-
-button.on .three {
-    animation: three .2s;
-    transform: rotate(-45deg);
-    bottom: 50%;
+button.toggle03 .two{
+    animation: two-out .2s;
+    top: calc(50% - 1px);
+    left: 0%;
+}
+button .three {
+    bottom: 0%;
     width: 140%;
     left: -3.5px;
 }
-button .three {
+button.on .three {
+    animation: three .2s;
+    transform: rotate(-45deg);
+}
+button.toggle02 .three {
+    bottom: 9px;
+    width: 140%;
+    left: -4px;
+}
+button.toggle03 .three {
     animation: three-out .2s;
     bottom: 0px;
     width: 100%;

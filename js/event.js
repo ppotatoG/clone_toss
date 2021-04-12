@@ -24,8 +24,12 @@ menuBtn.addEventListener('click', function(){
 
     if(this.classList.contains('on')) {
         header.classList.add('bgFFF')
+        this.classList.add('toggle02')
+        this.classList.remove('toggle03')
     } else {
         header.classList.remove('bgFFF')
+        this.classList.remove('toggle02')
+        this.classList.add('toggle03')
     }
 });
 
