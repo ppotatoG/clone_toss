@@ -17,6 +17,17 @@ function headerFunction() {
 window.addEventListener('scroll', headerFunction)
 window.addEventListener('load', headerFunction)
 
+function responsive() {
+    const tossCardImg = document.querySelector('#toss-card figure img')
+    if(window.innerWidth>786) {
+        tossCardImg.src="images/tosscard-plcc-desktop.png"
+    }else {
+        tossCardImg.src="images/tosscard-plcc-mobile.png"
+    }
+}
+window.addEventListener('resize', responsive)
+window.addEventListener('load', responsive)
+
 let menuBtn=document.querySelector('.menu-toggle');
 
 menuBtn.addEventListener('click', function(){
@@ -94,3 +105,4 @@ contents.addEventListener('click', function(e){
         }
     }
 })
+
