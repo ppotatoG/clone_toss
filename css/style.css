@@ -454,7 +454,9 @@ section .tab-message+a {margin-top: 3rem;}
 
     #moblie-cta {display: none;}
 
-    section {min-height: 80vh;}
+    section {min-height: 90vh;}
+    section h3 {font-size: 5rem;}
+    section h3+p {font-size: 2rem;}
 
     #main {
         background-image: url(../images/hero.png);
@@ -486,14 +488,52 @@ section .tab-message+a {margin-top: 3rem;}
     #main .pc-cta li:hover{margin-bottom: .2rem;}
     #main .pc-cta li a {
         color: #fff; 
-        font-size: 2rem; 
+        font-size: 1.8rem; 
         border: 1px solid #fff; 
         border-radius: .5rem;
         padding: 1rem 2rem; 
         display: flex; 
         align-items: center;
     }
-    #main .pc-cta li a img {width: auto;}
+    #main .pc-cta li a img {
+        width: auto;
+        margin-right: 1rem;
+    }
+
+    .flex-box {
+        display: flex;
+        align-items: flex-end;
+    }
+    #award >* {
+        width: 80%;
+        max-width: 1000px;
+    }
+    #award ul {justify-content: left;}
+    #award p {
+        text-align: left;
+        margin-top: 5rem;
+    }
+    #award p span {font-size: 5rem;}
+    #award p.remark {margin-top: 7rem;}
+
+    #toss-card {
+        min-height: initial;
+        background-color: #f0f1f1;
+        flex-direction: row;
+        justify-content: initial;
+    }
+    #toss-card figure {
+        margin-left: -10%;
+        height: 100%;
+    }
+    #toss-card figure img {
+        width: 150%;
+        margin-left: -40%;
+    }
+    #toss-card .text-box {
+        text-align: left;
+    }
+    
 }
 
 @media all and (min-width:1000px) {
