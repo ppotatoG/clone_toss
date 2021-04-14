@@ -330,7 +330,7 @@ section .tab-area .tab-message {
 }
 section .tab-message+a {margin-top: 3rem;}
 /* position과 z-index */
-.management .wrap >div {
+#account .wrap >div {
     background-color: rgb(247, 255, 231); 
     width: 50%; 
     margin: 0 auto; 
@@ -342,7 +342,7 @@ section .tab-message+a {margin-top: 3rem;}
     padding: 2rem; 
     margin-top: 2rem;
 }
-.management .wrap >div figure{max-width: 2.4rem;}
+#account .wrap >div figure{max-width: 2.4rem;}
 
 #toss-pay .video-wrap {
     overflow: hidden; 
@@ -454,7 +454,10 @@ section .tab-message+a {margin-top: 3rem;}
 
     #moblie-cta {display: none;}
 
-    section {min-height: 90vh;}
+    section {
+        min-height: 90vh;
+        text-align: left;
+    }
     section h3 {font-size: 5rem;}
     section h3+p {font-size: 2rem;}
 
@@ -502,13 +505,19 @@ section .tab-message+a {margin-top: 3rem;}
 
     .flex-box {
         display: flex;
-        align-items: flex-end;
+        flex-direction: initial;
     }
-    #award >* {
+    .flex-box.v2 >* {width: 50%;}
+    #award {
+        display: block;
+    }
+    section#award >* {
         width: 80%;
         max-width: 1000px;
+        margin: 0 auto;
     }
     #award ul {justify-content: left;}
+    #award .flex-box {align-items: flex-end;}
     #award p {
         text-align: left;
         margin-top: 5rem;
@@ -519,19 +528,26 @@ section .tab-message+a {margin-top: 3rem;}
     #toss-card {
         min-height: initial;
         background-color: #f0f1f1;
-        flex-direction: row;
         justify-content: initial;
+        padding: 0;
+        padding-top: 8rem;
     }
     #toss-card figure {
         margin-left: -10%;
         height: 100%;
     }
+    /* padding-bottm 같은걸로 .pc-wrap width랑 비율 맞춰야 할 듯 */
     #toss-card figure img {
         width: 150%;
         margin-left: -40%;
     }
     #toss-card .text-box {
         text-align: left;
+    }
+
+    #account .wrap >div {
+        width: 80%;
+        margin: 0;
     }
     
 }
