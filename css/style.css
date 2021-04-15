@@ -175,7 +175,7 @@ section h3 {
 section h3+p, section p+a {margin-top: 3rem;}
 section a {
     color: #3182f6; 
-    font-weight: 500;
+    font-weight: 700;
 }
 a.plus::after{
     content:">";
@@ -506,11 +506,12 @@ section .tab-message+a {margin-top: 3rem;}
     .flex-box {
         display: flex;
         flex-direction: initial;
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
     }
     .flex-box.v2 >* {width: 50%;}
-    #award {
-        display: block;
-    }
+
     section#award >* {
         width: 80%;
         max-width: 1000px;
@@ -526,23 +527,27 @@ section .tab-message+a {margin-top: 3rem;}
     #award p.remark {margin-top: 7rem;}
 
     #toss-card {
-        min-height: initial;
         background-color: #f0f1f1;
         justify-content: initial;
         padding: 0;
-        padding-top: 8rem;
+        overflow: hidden;
+        position: relative;
+        height: 752px;
+        min-height: initial;
     }
     #toss-card figure {
-        margin-left: -10%;
-        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 1330px;
+        height: 752px;
+        right: 25%;
     }
     /* padding-bottm 같은걸로 .pc-wrap width랑 비율 맞춰야 할 듯 */
-    #toss-card figure img {
-        width: 150%;
-        margin-left: -40%;
-    }
     #toss-card .text-box {
         text-align: left;
+        position: inherit;
+        width: 50%;
+        margin-left: 50%;
     }
 
     #account .wrap >div {
