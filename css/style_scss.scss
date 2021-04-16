@@ -1,5 +1,8 @@
 @charset "urf-8";
-@import "menu_animation.css";
+// @import "animation.css";
+
+html {scroll-behavior: smooth;}
+
 header {
     width: 100%; 
     height: 60px; 
@@ -7,109 +10,118 @@ header {
     top: 0; 
     left: 0; 
     z-index: 10;
-    background-color: transparent;
     transition: background-color .2s; 
-    .header-wrap {
+    .wrap {
         height: 60px;
-        padding: 0 2rem;
+        padding: 0 3rem;
         box-sizing: border-box;
         display: flex; 
         justify-content: space-between; 
         align-items: center;
-    }
-    .logo {
-        width: 78px;
-        text-indent: -9999px;
-        background: {
-            image: url(../images/logo.svg);
-            size: contain;
-            repeat: no-repeat;
-            position: center center;
+        .logo {
+            width: 78px;
+            text-indent: -9999px;
+            background: {
+                image: url(../images/logo.svg);
+                size: contain;
+                repeat: no-repeat;
+                position: center center;
+            }
         }
-    }
-    .menu-toggle {
-        width: 20px;
-        height: 20px;
-        position: relative;
-        margin: 10px;
-        overflow: hidden;
-        span{
-            width: 100%; 
-            height: 2px; 
-            background-color: #999; 
-            display: block;
-            position: absolute;
-            left: 0;
-            transform-origin: center center;
-        }
-        &.on .one {
-            animation: one .5s;
-            transform: rotate(45deg);
-            top: 10px;
-            width: 140%;
-            left: -3.5px;
-        }
-        & .one {
-            animation: one-out .5s;
-            top: 0;
-            width: 100%;
-            left: 0;
-        }        
-        & .two{
-            animation: two-out .5s;
-            top: calc(50% - 1px);
-            left: 0%;
-        }
-        &.on .two{
-            animation: two .5s;
-            top: calc(50% - 1px);
-            left: 100%;
-        }
-        &.on .three {
-            animation: three .5s;
-            transform: rotate(-45deg);
-            bottom: 50%;
-            width: 140%;
-            left: -3.5px;
-        }
-        & .three {
-            animation: three-out .5s;
-            bottom: 0px;
-            width: 100%;
-            left: 0px;
-        }
-        
-    }
-    &.style {background-color: #fff;}
-    .menu-wrap {
-        width: 100%; 
-        position: absolute; 
-        top: -20px;
-        right: 0; 
-        transition: top .2s ease-in-out;
-        z-index: -1;
-        visibility: hidden;
-        ul {
-            background: #fff; 
-            padding-bottom: 1rem;
-            visibility: hidden;
-            li {height: 48px;}
-            li a {
+        .menu-toggle {
+            border: none; 
+            outline: none;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            margin: 1rem .5rem;
+            overflow: hidden;
+            span{
                 width: 100%; 
-                height: 100%; 
-                padding-left: 4rem; 
-                box-sizing: border-box; 
-                line-height: 48px;
-                font-weight: 300;
-                &:hover {background: #eee;}
+                height: 2px; 
+                background-color: #999; 
+                display: block;
+                position: absolute;
+                left: 0;
+                transform-origin: center center;
+            }     
+            & .one {
+                top: 0px;
+                width: 140%;
+            } 
+            &.on .one {
+                animation: one .2s;
+                transform: rotate(45deg);
+            }
+            &.toggle02 .one {
+                width: 140%;
+                top: 9px;
+                left: -4px;
+            }
+            &.toggle03 .one {
+                animation: one-out .2s;
+                top: 0;
+                width: 100%;
+                left: 0;
+            }
+            &.on .two{
+                animation: two .2s;
+                top: calc(50% - 1px);
+                left: 100%;
+            }
+            &.toggle03 .two{
+                animation: two-out .2s;
+                top: calc(50% - 1px);
+                left: 0%;
+            }
+            & .three {
+                bottom: 0%;
+                width: 140%;
+                left: -3.5px;
+            }
+            &.on .three {
+                animation: three .2s;
+                transform: rotate(-45deg);
+            }
+            &.toggle02 .three {
+                bottom: 9px;
+                width: 140%;
+                left: -4px;
+            }
+            &.toggle03 .three {
+                animation: three-out .2s;
+                bottom: 0px;
+                width: 100%;
+                left: 0px;
+            }
+        }
+        .menu {
+            width: 100%; 
+            position: absolute; 
+            top: -250px;
+            right: 0; 
+            margin-top: -50px;
+            transition: margin .2s ease-in-out;
+            z-index: -1;
+            ul {
+                background: #fff; 
+                padding-bottom: 1rem;
+                li {height: 48px;}
+                a {
+                    width: 100%; 
+                    height: 100%; 
+                    padding-left: 4rem; 
+                    box-sizing: border-box; 
+                    line-height: 48px;
+                    font-weight: 300;
+                    &:hover {background: #eee;}
+                }
             }
         }
     }
-    &.fix .menu-wrap{background: #fff;}
-    
-    .menu-toggle.on+.menu-wrap {
+    &.fix .menu {background: #fff;}
+    .menu-toggle.on+.menu {
         top: 60px;
-        visibility: visible;
-        ul{visibility: visible;}
+        margin-top: 0;;
     }
 }

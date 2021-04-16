@@ -34,11 +34,11 @@ menuBtn.addEventListener('click', function(){
     this.classList.toggle('on')
 
     if(this.classList.contains('on')) {
-        header.classList.add('bgFFF')
+        header.style.background="#fff";
         this.classList.add('toggle02')
         this.classList.remove('toggle03')
     } else {
-        header.classList.remove('bgFFF')
+        header.style.background="transparent";
         this.classList.remove('toggle02')
         this.classList.add('toggle03')
     }
