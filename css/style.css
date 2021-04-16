@@ -3,7 +3,6 @@
 
 html {scroll-behavior: smooth;}
 
-.bgFFF {background-color: #fff;}
 
 header {
     width: 100%; 
@@ -528,7 +527,7 @@ section .tab-message+a {margin-top: 3rem;}
 
     #toss-card {
         background-color: #f0f1f1;
-        justify-content: initial;
+        flex-direction: inherit;
         padding: 0;
         overflow: hidden;
         position: relative;
@@ -540,7 +539,7 @@ section .tab-message+a {margin-top: 3rem;}
         top: 0;
         width: 1330px;
         height: 752px;
-        right: 25%;
+        right: 31vw;
     }
     /* padding-bottm 같은걸로 .pc-wrap width랑 비율 맞춰야 할 듯 */
     #toss-card .text-box {
