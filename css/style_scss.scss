@@ -1,6 +1,8 @@
 @charset "urf-8";
 // @import "animation.css";
 
+$ci-color :#3182f6;
+
 html {scroll-behavior: smooth;}
 
 header {
@@ -127,4 +129,55 @@ header {
     .menu-toggle.toggle03+.menu {
         animation-name: menu-up;
     }
+}
+
+//mo cta 마지막에 진행
+#moblie-cta {display: none;}
+#main .pc-cta {display: none;}
+
+section {
+    padding: 8rem 0; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+    text-align: center;
+    background-color: #fff;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3 {
+        font-weight: 600; 
+        font-size: 2.4rem;
+    }
+    h3+p, p+a {margin-top: 3rem;}
+    a {
+        color: #3182f6; 
+        font-weight: 700;
+        &.plus::after{
+            content:">";
+            display: inline-block;
+            color: $bi-color;
+            margin-left: 1rem;
+        }
+        &.round-btn { 
+            padding: 1rem 2rem; 
+            text-align: center;
+            border-radius: 3rem; 
+            border: 1px solid #333; 
+            font-weight: 600;
+            background-color: transparent;
+            display: inline-block; 
+            color: #333; 
+            transition: background-color .2s;
+            &:hover {
+                background-color: #333; 
+                color: #fff;
+                &::after {color: #fff;}
+            }
+            &::after {color: #333;}
+
+        }
+    }
+    .remark {font-size: 1.4rem;}
 }

@@ -178,4 +178,86 @@ header .menu-toggle.toggle03 + .menu {
   -webkit-animation-name: menu-up;
           animation-name: menu-up;
 }
+
+#moblie-cta {
+  display: none;
+}
+
+#main .pc-cta {
+  display: none;
+}
+
+section {
+  padding: 8rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section h3 {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+section h3 + p, section p + a {
+  margin-top: 3rem;
+}
+
+section a {
+  color: #3182f6;
+  font-weight: 700;
+}
+
+section a.plus::after {
+  content: ">";
+  display: inline-block;
+  color: #3182f6;
+  margin-left: 1rem;
+}
+
+section a.round-btn {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 3rem;
+  border: 1px solid #333;
+  font-weight: 600;
+  background-color: transparent;
+  display: inline-block;
+  color: #333;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+section a.round-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+section a.round-btn:hover::after {
+  color: #fff;
+}
+
+section a.round-btn::after {
+  color: #333;
+}
+
+section .remark {
+  font-size: 1.4rem;
+}
 /*# sourceMappingURL=style_scss.css.map */
