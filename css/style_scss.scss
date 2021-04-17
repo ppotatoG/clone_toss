@@ -64,6 +64,7 @@ header {
                 width: 100%;
                 left: 0;
             }
+            & .two {top: calc(50% - 1px);}
             &.on .two{
                 animation: two .2s;
                 top: calc(50% - 1px);
@@ -100,9 +101,9 @@ header {
             position: absolute; 
             top: -250px;
             right: 0; 
-            margin-top: -50px;
-            transition: margin .2s ease-in-out;
             z-index: -1;
+            animation-duration: .2s;
+            animation-fill-mode: forwards;
             ul {
                 background: #fff; 
                 padding-bottom: 1rem;
@@ -120,8 +121,10 @@ header {
         }
     }
     &.fix .menu {background: #fff;}
-    .menu-toggle.on+.menu {
-        top: 60px;
-        margin-top: 0;;
+    .menu-toggle.toggle02+.menu {
+        animation-name: menu-down;
+    }
+    .menu-toggle.toggle03+.menu {
+        animation-name: menu-up;
     }
 }

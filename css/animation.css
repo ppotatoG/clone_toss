@@ -124,3 +124,19 @@
         left: 0px;
     }
 }
+@keyframes menu-down {
+    0% {
+        top: -250px;
+    }
+    100% {
+        top: 60px;
+    }
+}
+@keyframes menu-up {
+    0% {
+        top: 60px;
+    }
+    100% {
+        top: -250px;
+    }
+}

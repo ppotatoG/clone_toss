@@ -85,6 +85,10 @@ header .wrap .menu-toggle.toggle03 .one {
   left: 0;
 }
 
+header .wrap .menu-toggle .two {
+  top: calc(50% - 1px);
+}
+
 header .wrap .menu-toggle.on .two {
   -webkit-animation: two .2s;
           animation: two .2s;
@@ -131,10 +135,11 @@ header .wrap .menu {
   position: absolute;
   top: -250px;
   right: 0;
-  margin-top: -50px;
-  -webkit-transition: margin .2s ease-in-out;
-  transition: margin .2s ease-in-out;
   z-index: -1;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 header .wrap .menu ul {
@@ -164,8 +169,13 @@ header.fix .menu {
   background: #fff;
 }
 
-header .menu-toggle.on + .menu {
-  top: 60px;
-  margin-top: 0;
+header .menu-toggle.toggle02 + .menu {
+  -webkit-animation-name: menu-down;
+          animation-name: menu-down;
+}
+
+header .menu-toggle.toggle03 + .menu {
+  -webkit-animation-name: menu-up;
+          animation-name: menu-up;
 }
 /*# sourceMappingURL=style_scss.css.map */
