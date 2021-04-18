@@ -2,6 +2,7 @@
 // @import "animation.css";
 
 $ci-color :#3182f6;
+$white : #fff;
 
 html {scroll-behavior: smooth;}
 
@@ -107,7 +108,7 @@ header {
             animation-duration: .2s;
             animation-fill-mode: forwards;
             ul {
-                background: #fff; 
+                background: $white; 
                 padding-bottom: 1rem;
                 li {height: 48px;}
                 a {
@@ -122,7 +123,8 @@ header {
             }
         }
     }
-    &.fix .menu {background: #fff;}
+    &.fix {background-color: $white;}
+    &.fix .menu {background: $white;}
     .menu-toggle.toggle02+.menu {
         animation-name: menu-down;
     }
@@ -140,7 +142,7 @@ section {
     box-sizing: border-box; 
     overflow: hidden; 
     text-align: center;
-    background-color: #fff;
+    background-color: $white;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -172,8 +174,8 @@ section {
             transition: background-color .2s;
             &:hover {
                 background-color: #333; 
-                color: #fff;
-                &::after {color: #fff;}
+                color: $white;
+                &::after {color: $white;}
             }
             &::after {color: #333;}
 
@@ -236,4 +238,24 @@ section {
             }
         } 
     }
+    p {
+        margin-top: 4rem;
+        span {
+            font-size: 3rem;
+            span {display: inline-block;}
+        }
+    }
+    a.plus {
+        margin: 0;
+        border-color: #768399;
+        color: #768399; 
+        &::after {color: #768399;}
+        &:hover {
+            border-color: #303d51;
+            background-color: #303d51;
+            color : $white;
+            &::after {color: $white;}
+        }
+    }
+    .remark {margin-top: 5rem;}
 }

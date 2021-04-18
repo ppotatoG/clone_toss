@@ -165,6 +165,10 @@ header .wrap .menu ul a:hover {
   background: #eee;
 }
 
+header.fix {
+  background-color: #fff;
+}
+
 header.fix .menu {
   background: #fff;
 }
@@ -329,5 +333,41 @@ section .remark {
   opacity: .7;
   -webkit-transition: .2s;
   transition: .2s;
+}
+
+#award p {
+  margin-top: 4rem;
+}
+
+#award p span {
+  font-size: 3rem;
+}
+
+#award p span span {
+  display: inline-block;
+}
+
+#award a.plus {
+  margin: 0;
+  border-color: #768399;
+  color: #768399;
+}
+
+#award a.plus::after {
+  color: #768399;
+}
+
+#award a.plus:hover {
+  border-color: #303d51;
+  background-color: #303d51;
+  color: #fff;
+}
+
+#award a.plus:hover::after {
+  color: #fff;
+}
+
+#award .remark {
+  margin-top: 5rem;
 }
 /*# sourceMappingURL=style_scss.css.map */

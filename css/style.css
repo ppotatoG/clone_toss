@@ -269,6 +269,7 @@ a.plus::after{
 #award a.plus::after {color: #768399;}
 #award a.plus:hover::after {color: #fff;}
 #award .remark {margin-top: 5rem;}
+
 section .tab-area figure {
     overflow: hidden; 
     width: 90%; 
