@@ -8,7 +8,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
   -webkit-transition: background-color .2s;
   transition: background-color .2s;
 }
@@ -369,6 +369,12 @@ section .remark {
 
 #award .remark {
   margin-top: 5rem;
+}
+
+#toss-card {
+  padding-top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eff0f0), to(white));
+  background: linear-gradient(180deg, #eff0f0 0%, white 100%);
 }
 
 section .tab-area {

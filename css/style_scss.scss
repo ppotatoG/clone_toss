@@ -12,7 +12,7 @@ header {
     position: fixed; 
     top: 0; 
     left: 0; 
-    z-index: 10;
+    z-index: 100;
     transition: background-color .2s; 
     .wrap {
         height: 60px;
@@ -258,6 +258,11 @@ section {
         }
     }
     .remark {margin-top: 5rem;}
+}
+
+#toss-card {
+    padding-top: 0;
+    background: linear-gradient(180deg, rgba(239,240,240,1) 0%, rgba(255,255,255,1) 100%) ;
 }
 
 section .tab-area  {
