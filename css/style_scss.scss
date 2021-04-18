@@ -1,6 +1,15 @@
 @charset "urf-8";
-// @import "animation.css";
+// Breakpoints
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 758px;
+$breakpoint-desktop: 1024px;
 
+@mixin mobile {
+    @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+      @content;
+    }
+}
+  
 $ci-color :#3182f6;
 $white : #fff;
 
@@ -154,7 +163,7 @@ section {
     }
     h3+p, p+a {margin-top: 3rem;}
     a {
-        color: #3182f6; 
+        color: $ci-color; 
         font-weight: 700;
         &.plus::after{
             content:">";
