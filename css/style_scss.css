@@ -371,62 +371,56 @@ section .remark {
   margin-top: 5rem;
 }
 
-section .tab-area figure {
-  overflow: hidden;
-  width: 90%;
-  margin: 0 auto;
+section .tab-area {
   position: relative;
-  height: 410px;
+  width: 100%;
+  height: 70vw;
+  overflow: hidden;
 }
 
 section .tab-area figure img {
-  width: 400px;
-  margin: 0 auto;
-}
-
-section .tab-area .inner-contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc( 50% - 35vw);
+  z-index: 10;
+  width: 76vw;
 }
 
 section .tab-area .inner-contents img {
-  width: 208px;
+  width: 40vw;
   z-index: -1;
   -webkit-transition: right .2s;
   transition: right .2s;
   position: absolute;
-  top: 61px;
-  right: -120px;
+  top: 11.5vw;
+  right: -50vw;
 }
 
-section .tab-area .inner-contents.on {
-  right: calc(50% - 101px);
+section .tab-area .inner-contents img.on {
+  right: calc(50% - 22.5vw);
   z-index: 1;
 }
 
-section .tab-area .tab-menu {
-  width: 70%;
+section .tab-area + .tab-box {
+  margin-top: 20px;
+  width: 100%;
+}
+
+section .tab-area + .tab-box .menu {
   margin: 0 auto;
 }
 
-section .tab-area .tab-menu ul {
-  width: 100%;
+section .tab-area + .tab-box .menu ul {
+  margin: 0 auto;
+  width: 50vw;
+  min-width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 1rem;
 }
 
-section .tab-area .tab-menu ul li {
+section .tab-area + .tab-box .menu ul li {
+  width: 33%;
   padding: .5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -435,24 +429,39 @@ section .tab-area .tab-menu ul li {
   transition: color .2s, font-weight .2s;
 }
 
-section .tab-area .tab-menu ul.on {
+section .tab-area + .tab-box .menu ul li::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #444;
+  -webkit-transition: width .2s;
+  transition: width .2s;
+  margin-top: 1rem;
+}
+
+section .tab-area + .tab-box .menu ul li.on {
   color: #444;
-  border-bottom: 2px solid #444;
+  font-weight: 500;
+  width: 33%;
+}
+
+section .tab-area + .tab-box .menu ul li.on::after {
+  width: 100%;
+}
+
+section .tab-area + .tab-box .menu ul li:hover {
+  color: #444;
   font-weight: 500;
 }
 
-section .tab-area .tab-menu ul:hover {
-  color: #444;
-  font-weight: 500;
-}
-
-section .tab-area .tab-message {
+section .tab-area + .tab-box .message {
   width: 100%;
   text-align: center;
   margin-top: 3rem;
 }
 
-section .tab-area + a {
+section .tab-area + .tab-box .message + a {
   margin-top: 3rem;
 }
 /*# sourceMappingURL=style_scss.css.map */
