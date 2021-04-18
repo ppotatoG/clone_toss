@@ -370,4 +370,89 @@ section .remark {
 #award .remark {
   margin-top: 5rem;
 }
+
+section .tab-area figure {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  height: 410px;
+}
+
+section .tab-area figure img {
+  width: 400px;
+  margin: 0 auto;
+}
+
+section .tab-area .inner-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+section .tab-area .inner-contents img {
+  width: 208px;
+  z-index: -1;
+  -webkit-transition: right .2s;
+  transition: right .2s;
+  position: absolute;
+  top: 61px;
+  right: -120px;
+}
+
+section .tab-area .inner-contents.on {
+  right: calc(50% - 101px);
+  z-index: 1;
+}
+
+section .tab-area .tab-menu {
+  width: 70%;
+  margin: 0 auto;
+}
+
+section .tab-area .tab-menu ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+}
+
+section .tab-area .tab-menu ul li {
+  padding: .5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #888;
+  -webkit-transition: color .2s, font-weight .2s;
+  transition: color .2s, font-weight .2s;
+}
+
+section .tab-area .tab-menu ul.on {
+  color: #444;
+  border-bottom: 2px solid #444;
+  font-weight: 500;
+}
+
+section .tab-area .tab-menu ul:hover {
+  color: #444;
+  font-weight: 500;
+}
+
+section .tab-area .tab-message {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+section .tab-area + a {
+  margin-top: 3rem;
+}
 /*# sourceMappingURL=style_scss.css.map */
