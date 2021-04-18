@@ -265,6 +265,25 @@ section {
     background: linear-gradient(180deg, rgba(239,240,240,1) 0%, rgba(255,255,255,1) 100%) ;
 }
 
+#account {
+    .wrap {
+        width: 100%;
+        &>div {
+            background-color: rgb(247, 255, 231); 
+            width: 50%; 
+            margin: 0 auto; 
+            border-radius: 2rem;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            box-sizing: border-box; 
+            padding: 2rem; 
+            margin-top: 2rem;
+            figure{max-width: 2.4rem;}
+        }
+    }
+    }
+
 section .tab-area  {
     position: relative; 
     width: 100%;
