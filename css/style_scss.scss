@@ -375,7 +375,7 @@ section .tab-area  {
 	}
 }
 @mixin tab {
-	@media screen and (max-width: #{$tablet}) {
+	@media screen and (min-width: #{$tablet}) {
 		@content;
 	}
 }
@@ -390,9 +390,14 @@ section .tab-area  {
 	}
 }
 @include tab{
-	body{
-		padding:0 15px;
-	}
+	.tab-area{
+        figure img{
+            width: 38vw;
+            left: clac( 50% - 19vw );
+            position: absolute;
+            top: 0;
+        }
+    }
 }
 @include mob{
 	body{

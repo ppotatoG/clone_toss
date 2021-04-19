@@ -509,9 +509,10 @@ section .tab-area + .tab-box .message + a {
   }
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    padding: 0 15px;
+@media screen and (min-width: 768px) {
+  .tab-area figure {
+    position: absolute;
+    top: 0;
   }
 }
 
