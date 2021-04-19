@@ -11,6 +11,11 @@
     align-items: center;
 }
 
+// Breakpoints
+$desktop : 1024px;
+$tablet : 768px;
+$mobile : 480px;
+
 // color
 $ci-color :#3182f6;
 $white : #fff;
@@ -362,4 +367,35 @@ section .tab-area  {
             &+a {margin-top: 3rem;}
         }
     }
+}
+
+@mixin pc {
+	@media screen and (min-width: #{$desktop}) {
+		@content;
+	}
+}
+@mixin tab {
+	@media screen and (max-width: #{$tablet}) {
+		@content;
+	}
+}
+@mixin mob {
+	@media screen and (max-width: #{$mobile}) {
+		@content;
+	}
+}
+@include pc{
+	body{
+		padding:0 15px;
+	}
+}
+@include tab{
+	body{
+		padding:0 15px;
+	}
+}
+@include mob{
+	body{
+		padding:0 15px;
+	}
 }
