@@ -1,15 +1,17 @@
 @charset "urf-8";
-// Breakpoints
-$breakpoint-mobile: 335px;
-$breakpoint-tablet: 758px;
-$breakpoint-desktop: 1024px;
 
-@mixin mobile {
-    @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
-      @content;
-    }
+@mixin center {
+    width: 100%;
+    margin: 0 auto;
 }
-  
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// color
 $ci-color :#3182f6;
 $white : #fff;
 
@@ -24,12 +26,10 @@ header {
     z-index: 100;
     transition: background-color .2s; 
     .wrap {
+        @include flex;
         height: 60px;
         padding: 0 3rem;
         box-sizing: border-box;
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center;
         .logo {
             width: 78px;
             text-indent: -9999px;
@@ -147,16 +147,14 @@ header {
 #main .pc-cta {display: none;}
 
 section {
+    @include flex;
+    flex-direction: column;
     padding: 8rem 0; 
     box-sizing: border-box; 
     overflow: hidden; 
     text-align: center;
     background-color: $white;
     min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     h3 {
         font-weight: 600; 
         font-size: 2.4rem;
@@ -233,8 +231,8 @@ section {
         color: #fafafa;
     }
     ul {
+        @include center;
         width: 90%; 
-        margin: 0 auto;
         display: flex; 
         justify-content: center;
         a {
@@ -278,13 +276,11 @@ section {
     .wrap {
         width: 100%;
         &>div {
+            @include center;
+            @include flex;
             background-color: rgb(247, 255, 231); 
             width: 50%; 
-            margin: 0 auto; 
             border-radius: 2rem;
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
             box-sizing: border-box; 
             padding: 2rem; 
             margin-top: 2rem;
@@ -325,9 +321,9 @@ section .tab-area  {
         margin-top: 20px;
         width: 100%;
         .menu {
-            margin: 0 auto;
+            @include center;
             ul {
-                margin: 0 auto;
+                @include center;
                 width: 50vw; 
                 min-width: 350px;
                 display: flex;

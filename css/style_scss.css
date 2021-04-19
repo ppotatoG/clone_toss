@@ -14,19 +14,19 @@ header {
 }
 
 header .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 60px;
   padding: 0 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 header .wrap .logo {
@@ -192,6 +192,19 @@ header .menu-toggle.toggle03 + .menu {
 }
 
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 8rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -199,19 +212,6 @@ section {
   text-align: center;
   background-color: #fff;
   min-height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 section h3 {
@@ -309,8 +309,9 @@ section .remark {
 }
 
 #award ul {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,19 +383,20 @@ section .remark {
 }
 
 #account .wrap > div {
-  background-color: #f7ffe7;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
-  border-radius: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #f7ffe7;
+  width: 50%;
+  border-radius: 2rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2rem;
@@ -441,10 +443,12 @@ section .tab-area + .tab-box {
 }
 
 section .tab-area + .tab-box .menu {
+  width: 100%;
   margin: 0 auto;
 }
 
 section .tab-area + .tab-box .menu ul {
+  width: 100%;
   margin: 0 auto;
   width: 50vw;
   min-width: 350px;
