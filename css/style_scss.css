@@ -394,8 +394,8 @@ section .remark {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f7ffe7;
   width: 50%;
+  background-color: #f7ffe7;
   border-radius: 2rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -665,6 +665,153 @@ section .tab-area + .tab-box .message + a {
     transition: background-color .2s;
     background-color: #fff;
   }
+  #moblie-cta {
+    display: none;
+  }
+  section {
+    min-height: 90vh;
+    text-align: left;
+  }
+  section h3 {
+    font-size: 5rem;
+  }
+  section h3 + p {
+    font-size: 2rem;
+  }
+  #main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-image: url(../images/hero.png);
+  }
+  #main h2 {
+    color: #fff;
+    font-size: 5rem;
+    text-align: left;
+    padding-top: 0;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  #main .pc-cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 7rem;
+    margin: 2rem auto 0;
+    width: 80%;
+    max-width: 1000px;
+  }
+  #main .pc-cta li {
+    margin-left: 2rem;
+    -webkit-transition: margin .2s;
+    transition: margin .2s;
+  }
+  #main .pc-cta li:first-child {
+    margin-left: 0rem;
+  }
+  #main .pc-cta li:hover {
+    margin-bottom: .2rem;
+  }
+  #main .pc-cta li a {
+    color: #fff;
+    font-size: 1.8rem;
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main .pc-cta li a img {
+    width: auto;
+    margin-right: 1rem;
+  }
+  .flex-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  #award > * {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  #award ul {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  #award .flex-box {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #award p {
+    text-align: left;
+    margin-top: 5rem;
+  }
+  #award p.remark {
+    margin-top: 7rem;
+  }
+  #award p span {
+    font-size: 5rem;
+  }
+  #toss-card {
+    background-color: #f0f1f1;
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    height: 752px;
+    min-height: initial;
+  }
+  #toss-card figure {
+    position: absolute;
+    top: 0;
+    width: 1330px;
+    height: 752px;
+    right: 31vw;
+  }
+  #toss-card .text-box {
+    text-align: left;
+    position: inherit;
+    width: 50%;
+    margin-left: 50%;
+  }
+  #account .wrap > div {
+    width: 80%;
+    margin: 0;
+  }
   #annoying {
     display: block;
     position: relative;
@@ -674,11 +821,11 @@ section .tab-area + .tab-box .message + a {
     margin-left: 45vw;
   }
   .tab-area {
+    width: 50%;
+    height: 50vw;
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
-    height: 50vw;
     overflow: hidden;
   }
   .tab-area figure img {

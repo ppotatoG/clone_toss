@@ -11,6 +11,8 @@
     align-items: center;
 }
 
+@mixin w_50 {width: 50%;}
+
 // Breakpoints
 $desktop : 1024px;
 $tablet : 768px;
@@ -285,8 +287,8 @@ section {
         &>div {
             @include center;
             @include flex;
+            @include w_50;
             background-color: rgb(247, 255, 231); 
-            width: 50%; 
             border-radius: 2rem;
             box-sizing: border-box; 
             padding: 2rem; 
@@ -507,20 +509,126 @@ section .tab-area  {
         }
     }
 
+    #moblie-cta {display: none;}
+
+    section {
+        min-height: 90vh;
+        text-align: left;
+        h3 {
+            font-size: 5rem;
+            &+p {font-size: 2rem;}
+        }
+    }
+
+    #main {
+        @include flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-image: url(../images/hero.png);
+        h2 {
+            color: #fff; 
+            font-size: 5rem; 
+            text-align: left;
+            padding-top: 0;
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .pc-cta {
+            display: flex; 
+            align-items: flex-end;
+            height: 7rem;
+            margin: 2rem auto 0;
+            width: 80%;
+            max-width: 1000px;
+            li {
+                margin-left: 2rem; 
+                transition: margin .2s;
+                &:first-child {margin-left: 0rem;}
+                &:hover{margin-bottom: .2rem;}
+                a {
+                    color: #fff; 
+                    font-size: 1.8rem; 
+                    border: 1px solid #fff; 
+                    border-radius: .5rem;
+                    padding: 1rem 2rem; 
+                    display: flex; 
+                    align-items: center;
+                    img {
+                        width: auto;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .flex-box {
+        display: flex;
+        flex-direction: initial;
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #award {
+        & >* {
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+        }
+        ul {justify-content: left;}
+        .flex-box {align-items: flex-end;}
+        p {
+            text-align: left;
+            margin-top: 5rem;
+            &.remark {margin-top: 7rem;}
+            span {font-size: 5rem;}
+        }
+    }
+
+    #toss-card {
+        background-color: #f0f1f1;
+        flex-direction: inherit;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        height: 752px;
+        min-height: initial;
+        figure {
+            position: absolute;
+            top: 0;
+            width: 1330px;
+            height: 752px;
+            right: 31vw;
+        }
+        .text-box {
+            text-align: left;
+            position: inherit;
+            width: 50%;
+            margin-left: 50%;
+        }
+    }
+
+    #account .wrap >div {
+        width: 80%;
+        margin: 0;
+    }
+
     #annoying {
         display: block;
         position: relative;
         & h3, & .tab-box {
-            width: 50%;
+            @include w_50;
             margin-left: 45vw;
         }
     }
     .tab-area {
+        @include w_50;
+        height: 50vw;
         position: absolute;
         top: 0;
         left: 0;
-        width: 50%;
-        height: 50vw;
         overflow: hidden;
         figure img {
             width: 50vw;
