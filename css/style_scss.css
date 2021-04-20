@@ -618,13 +618,53 @@ section .tab-area + .tab-box .message + a {
   margin-left: 0rem;
 }
 
-@media screen and (min-width: 1024px) {
-  body {
-    padding: 0 15px;
-  }
-}
-
 @media screen and (min-width: 768px) {
+  header .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  header .logo {
+    left: 10%;
+    background-image: url(../images/logo-white.svg);
+  }
+  header .menu-toggle {
+    display: none;
+  }
+  header .menu {
+    margin: 0;
+    position: inherit;
+    right: 3%;
+    max-width: 500px;
+  }
+  header .menu ul {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+  header .menu ul li {
+    height: 60px;
+  }
+  header .menu ul li a {
+    padding: 0 1rem;
+    line-height: 60px;
+  }
+  header .menu ul li a:hover {
+    background: transparent;
+  }
+  header.fix .logo {
+    background-image: url(../images/logo.svg);
+  }
+  header.fix .menu {
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+    background-color: #fff;
+  }
   #annoying {
     display: block;
     position: relative;
@@ -651,12 +691,6 @@ section .tab-area + .tab-box .message + a {
   }
   .tab-area .inner-contents img.on {
     left: 11vw;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    padding: 0 15px;
   }
 }
 /*# sourceMappingURL=style_scss.css.map */

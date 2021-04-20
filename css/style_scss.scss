@@ -137,8 +137,10 @@ header {
             }
         }
     }
-    &.fix {background-color: $white;}
-    &.fix .menu {background: $white;}
+    &.fix {
+        background-color: $white;
+        .menu {background: $white;}
+    }
     .menu-toggle.toggle02+.menu {
         animation-name: menu-down;
     }
@@ -459,17 +461,52 @@ section .tab-area  {
 		@content;
 	}
 }
-@mixin mob {
+@mixin mobile {
 	@media screen and (max-width: #{$mobile}) {
 		@content;
 	}
 }
-@include pc{
-	body{
-		padding:0 15px;
-	}
-}
 @include tablet{
+    header { 
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .logo {
+            left: 10%;
+            background-image: url(../images/logo-white.svg);
+        }
+        .menu-toggle {display: none;}
+        .menu {
+            margin: 0;
+            position: inherit;
+            right: 3%;
+            max-width: 500px;
+            ul {
+                visibility: visible;
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 0;
+                background-color: transparent;
+                li {
+                    height: 60px;
+                    a {
+                        padding: 0 1rem; 
+                        line-height: 60px;
+                        &:hover {background: transparent;}
+                    }
+                }
+            }
+        }
+        &.fix {
+            .logo {background-image: url(../images/logo.svg);}
+            .menu {
+                transition: background-color .2s;
+                background-color: #fff;
+            }
+        }
+    }
+
     #annoying {
         display: block;
         position: relative;
@@ -496,9 +533,4 @@ section .tab-area  {
             &.on { left: 11vw;}
         }
     }
-}
-@include mob{
-	body{
-		padding:0 15px;
-	}
 }
