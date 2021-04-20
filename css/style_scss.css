@@ -544,6 +544,80 @@ section .tab-area + .tab-box .message + a {
   text-align: left;
 }
 
+#footer {
+  background: #f9fafb;
+  padding: 5rem;
+}
+
+#footer h3 {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+#footer .service ul {
+  margin-top: 3rem;
+}
+
+#footer .service ul:first-child {
+  margin-top: 0;
+}
+
+#footer .service ul li {
+  height: 3rem;
+  line-height: 3rem;
+}
+
+#footer a {
+  display: inline-block;
+}
+
+#footer a {
+  text-decoration: underline;
+}
+
+#footer .sns-wrap li img {
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  opacity: .7;
+}
+
+#footer .sns-wrap li:hover img {
+  opacity: 1;
+}
+
+#footer .info {
+  margin-top: 3rem;
+}
+
+#footer .info ul {
+  margin-top: 3rem;
+}
+
+#footer .info a, #footer .info span {
+  height: 3rem;
+  line-height: 3rem;
+}
+
+#footer .info b, #footer .info a, #footer .info span {
+  font-size: 1.4rem;
+}
+
+#footer .sns-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer .sns-wrap li {
+  margin-left: 1rem;
+  width: 35px;
+  height: 35px;
+}
+
+#footer .sns-wrap li:first-child {
+  margin-left: 0rem;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     padding: 0 15px;

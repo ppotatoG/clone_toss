@@ -403,6 +403,52 @@ section .tab-area  {
     }
 }
 
+#footer {
+    background: #f9fafb; 
+    padding: 5rem;
+    h3 {
+        font-weight: 500; 
+        margin-bottom: 1.5rem;
+    }
+    .service ul {
+        margin-top:3rem;
+        &:first-child {margin-top:0;}
+        li {
+            height: 3rem; 
+            line-height: 3rem;
+        }
+    }
+    a {
+        display: inline-block;
+        & {text-decoration: underline;}
+    }
+    .sns-wrap li {
+        img {
+            transition: opacity .2s; 
+            opacity: .7;
+        }
+        &:hover img {opacity: 1;}
+    }
+    .info {
+        margin-top: 3rem;
+        ul {margin-top: 3rem;}
+        & a, & span {
+            height: 3rem; 
+            line-height: 3rem;
+        }
+        & b, & a, & span {font-size: 1.4rem;}
+    }
+    .sns-wrap {
+        display: flex;
+        li {
+            margin-left: 1rem; 
+            width: 35px; 
+            height: 35px;
+            &:first-child {margin-left: 0rem;}
+        }
+    }
+}
+
 @mixin pc {
 	@media screen and (min-width: #{$desktop}) {
 		@content;
