@@ -503,6 +503,47 @@ section .tab-area + .tab-box .message + a {
   margin-top: 3rem;
 }
 
+#toss-pay .video-wrap {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  height: 410px;
+}
+
+#toss-pay .video-wrap figure {
+  margin: 5rem 0;
+}
+
+#toss-pay .video-wrap figure > img {
+  width: 400px;
+  margin: 0 auto;
+}
+
+#toss-pay .video-wrap > video {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#card .wrap figure {
+  max-width: 4rem;
+}
+
+#card .wrap figure > div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#card .wrap figure > div > div {
+  width: 70%;
+  padding-left: 3rem;
+  text-align: left;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     padding: 0 15px;

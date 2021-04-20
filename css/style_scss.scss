@@ -292,7 +292,7 @@ section {
             figure{max-width: 2.4rem;}
         }
     }
-    }
+}
 
 section .tab-area  {
     position: relative; 
@@ -365,6 +365,40 @@ section .tab-area  {
             text-align: center; 
             margin-top: 3rem;
             &+a {margin-top: 3rem;}
+        }
+    }
+}
+
+#toss-pay .video-wrap {
+    overflow: hidden; 
+    width: 90%; 
+    margin: 0 auto; 
+    position: relative; 
+    height: 410px;
+    figure {
+        margin: 5rem 0;
+        &>img {
+            width: 400px; 
+            margin: 0 auto;
+        }
+    }
+    &>video{
+        position: absolute;
+        top: 61px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#card .wrap figure { 
+    max-width: 4rem;
+    &>div {
+        justify-content: center;
+        &>div {
+            width: 70%;
+            padding-left: 3rem;
+            text-align: left;
         }
     }
 }
