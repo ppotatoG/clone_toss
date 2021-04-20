@@ -510,9 +510,32 @@ section .tab-area + .tab-box .message + a {
 }
 
 @media screen and (min-width: 768px) {
-  .tab-area figure {
+  #annoying {
+    display: block;
+    position: relative;
+  }
+  #annoying h3, #annoying .tab-box {
+    width: 50%;
+    margin-left: 45vw;
+  }
+  .tab-area {
     position: absolute;
     top: 0;
+    left: 0;
+    width: 50%;
+    height: 50vw;
+    overflow: hidden;
+  }
+  .tab-area figure img {
+    width: 50vw;
+    left: 0;
+  }
+  .tab-area .inner-contents img {
+    width: 27vw;
+    top: 7.5vw;
+  }
+  .tab-area .inner-contents img.on {
+    left: 11vw;
   }
 }
 

@@ -374,7 +374,7 @@ section .tab-area  {
 		@content;
 	}
 }
-@mixin tab {
+@mixin tablet {
 	@media screen and (min-width: #{$tablet}) {
 		@content;
 	}
@@ -389,13 +389,31 @@ section .tab-area  {
 		padding:0 15px;
 	}
 }
-@include tab{
-	.tab-area{
-        figure img{
-            width: 38vw;
-            left: clac( 50% - 19vw );
-            position: absolute;
-            top: 0;
+@include tablet{
+    #annoying {
+        display: block;
+        position: relative;
+        & h3, & .tab-box {
+            width: 50%;
+            margin-left: 45vw;
+        }
+    }
+    .tab-area {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 50vw;
+        overflow: hidden;
+        figure img {
+            width: 50vw;
+            left: 0;
+            
+        }
+        .inner-contents img {
+            width: 27vw; 
+            top: 7.5vw;
+            &.on { left: 11vw;}
         }
     }
 }
