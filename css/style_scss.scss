@@ -1,4 +1,5 @@
 @charset "urf-8";
+<<<<<<< HEAD
 
 @mixin center {
     width: 100%;
@@ -19,6 +20,10 @@ $tablet : 768px;
 $mobile : 480px;
 
 // color
+=======
+// @import "animation.css";
+
+>>>>>>> parent of 7953757 (미디어 쿼리는 다음에)
 $ci-color :#3182f6;
 $white : #fff;
 
@@ -170,7 +175,7 @@ section {
     }
     h3+p, p+a {margin-top: 3rem;}
     a {
-        color: $ci-color; 
+        color: #3182f6; 
         font-weight: 700;
         &.plus::after{
             content:">";
