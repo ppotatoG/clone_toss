@@ -48,7 +48,7 @@ contents.addEventListener('click', function(e){
     const istab = e.target.dataset.tab;
     if(istab) {
         const tabParent = e.target.parentNode;
-        const tabImgs = tabParent.parentNode.parentNode.previousElementSibling.querySelectorAll('.inner-contents img');     
+        const tabImgs = tabParent.parentNode.parentNode.querySelectorAll('.inner-contents img');     
         const tabMsg = tabParent.parentNode.nextElementSibling;
 
         for( const tab of tabParent.children ){
