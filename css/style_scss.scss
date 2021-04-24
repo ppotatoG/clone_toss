@@ -1,6 +1,4 @@
-@charset "urf-8";
-<<<<<<< HEAD
-<<<<<<< HEAD
+@charset "UTF-8"; 
 
 @mixin center {
     width: 100%;
@@ -9,7 +7,7 @@
 
 @mixin flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -21,14 +19,6 @@ $tablet : 768px;
 $mobile : 480px;
 
 // color
-=======
-// @import "animation.css";
-
->>>>>>> parent of 7953757 (미디어 쿼리는 다음에)
-=======
-// @import "animation.css";
-
->>>>>>> parent of 7953757 (미디어 쿼리는 다음에)
 $ci-color :#3182f6;
 $white : #fff;
 
@@ -297,13 +287,16 @@ section {
         &>div {
             @include center;
             @include flex;
-            @include w_50;
-            background-color: rgb(247, 255, 231); 
-            border-radius: 2rem;
-            box-sizing: border-box; 
+            border-radius: 15px;
             padding: 2rem; 
             margin-top: 2rem;
-            figure{max-width: 2.4rem;}
+            width: 60%;
+            box: {
+                sizing: border-box;
+                shadow: 2px 4px 32px rgba(0, 0, 0, .1);
+            }
+            .money {font-weight: 600;}
+            figure {max-width: 2.4rem;}
         }
     }
 }
@@ -375,7 +368,8 @@ section .tab-area  {
             }
         }
         .message {
-            width: 100%; 
+            @include center;
+            width: 90%;
             text-align: center; 
             margin-top: 3rem;
             &+a {margin-top: 3rem;}

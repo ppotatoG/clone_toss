@@ -17,9 +17,9 @@ header .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -195,9 +195,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -388,19 +388,24 @@ section .remark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
-  background-color: #f7ffe7;
-  border-radius: 2rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  border-radius: 15px;
   padding: 2rem;
   margin-top: 2rem;
+  width: 60%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 2px 4px 32px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 4px 32px rgba(0, 0, 0, 0.1);
+}
+
+#account .wrap > div .money {
+  font-weight: 600;
 }
 
 #account .wrap > div figure {
@@ -495,6 +500,8 @@ section .tab-area + .tab-box .menu ul li:hover {
 
 section .tab-area + .tab-box .message {
   width: 100%;
+  margin: 0 auto;
+  width: 90%;
   text-align: center;
   margin-top: 3rem;
 }
@@ -682,9 +689,9 @@ section .tab-area + .tab-box .message + a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
