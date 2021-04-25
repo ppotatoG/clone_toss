@@ -427,6 +427,15 @@ section .tab-area figure img {
   width: 76vw;
 }
 
+section .tab-area .inner-contents {
+  position: absolute;
+  top: 11vw;
+  left: calc(50% - 17.5vw);
+  width: 40vw;
+  height: 100%;
+  overflow: hidden;
+}
+
 section .tab-area .inner-contents img {
   width: 40vw;
   z-index: -1;
@@ -438,7 +447,8 @@ section .tab-area .inner-contents img {
 }
 
 section .tab-area .inner-contents img.on {
-  left: calc(50% - 22.5vw);
+  top: 4px;
+  left: 0;
   z-index: 1;
 }
 
@@ -826,7 +836,7 @@ section .tab-area + .tab-box .message + a {
   }
   #annoying {
     position: relative;
-    padding: 8rem 0 8rem 40vw;
+    padding: 8rem 0 8rem 50vw;
     height: 57vw;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -840,17 +850,21 @@ section .tab-area + .tab-box .message + a {
   }
   #annoying h3 ul li, #annoying .tab-box ul li {
     text-align: center;
+    width: auto;
+    margin-left: 20px;
+  }
+  #annoying h3 ul li:first-child, #annoying .tab-box ul li:first-child {
+    margin-left: 0;
   }
   #annoying h3 .message, #annoying .tab-box .message {
     width: 100%;
-    margin: 0;
     text-align: left;
   }
   #wrap .tab-area {
     width: 50%;
     position: absolute;
     top: 0;
-    left: 6vw;
+    left: 10vw;
   }
   #wrap .tab-area figure img {
     width: 50vw;
@@ -860,10 +874,8 @@ section .tab-area + .tab-box .message + a {
   #wrap .tab-area .inner-contents {
     width: 24vw;
     height: 47vw;
-    position: absolute;
     top: 6vw;
     left: 8vw;
-    overflow: hidden;
     border-radius: 4vw;
   }
   #wrap .tab-area .inner-contents img {
