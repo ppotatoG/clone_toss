@@ -453,13 +453,12 @@ section .tab-area + .tab-box .menu {
 }
 
 section .tab-area + .tab-box .menu ul {
-  width: 100%;
-  margin: 0 auto;
   width: 50vw;
   min-width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
 }
 
 section .tab-area + .tab-box .menu ul li {
@@ -702,6 +701,9 @@ section .tab-area + .tab-box .message + a {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-image: url(../images/hero.png);
   }
   #main h2 {
@@ -815,9 +817,12 @@ section .tab-area + .tab-box .message + a {
     width: 50%;
     margin-left: 50%;
   }
+  #account .text-box {
+    width: 100%;
+  }
   #account .wrap > div {
     width: 80%;
-    margin: 0;
+    margin-top: 30px;
   }
   #annoying {
     display: block;
@@ -825,9 +830,14 @@ section .tab-area + .tab-box .message + a {
   }
   #annoying h3, #annoying .tab-box {
     width: 50%;
-    margin-left: 45vw;
+    margin-left: 50vw;
+    max-width: 500px;
   }
-  .tab-area {
+  #annoying h3 li, #annoying .tab-box li {
+    text-align: center;
+  }
+  #wrap .tab-area {
+    background-color: skyblue;
     width: 50%;
     height: 50vw;
     position: absolute;
@@ -835,15 +845,15 @@ section .tab-area + .tab-box .message + a {
     left: 0;
     overflow: hidden;
   }
-  .tab-area figure img {
+  #wrap .tab-area figure img {
     width: 50vw;
     left: 0;
   }
-  .tab-area .inner-contents img {
+  #wrap .tab-area .inner-contents img {
     width: 27vw;
     top: 7.5vw;
   }
-  .tab-area .inner-contents img.on {
+  #wrap .tab-area .inner-contents img.on {
     left: 11vw;
   }
 }
