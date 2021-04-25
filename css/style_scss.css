@@ -430,15 +430,15 @@ section .tab-area figure img {
 section .tab-area .inner-contents img {
   width: 40vw;
   z-index: -1;
-  -webkit-transition: right .2s;
-  transition: right .2s;
+  -webkit-transition: right .2s, left .2s;
+  transition: right .2s, left .2s;
   position: absolute;
   top: 11.5vw;
-  right: -50vw;
+  left: -50vw;
 }
 
 section .tab-area .inner-contents img.on {
-  right: calc(50% - 22.5vw);
+  left: calc(50% - 22.5vw);
   z-index: 1;
 }
 
@@ -629,20 +629,20 @@ section .tab-area + .tab-box .message + a {
     max-width: 1000px;
     margin: 0 auto;
   }
-  header .logo {
+  header .wrap .logo {
     left: 10%;
     background-image: url(../images/logo-white.svg);
   }
-  header .menu-toggle {
+  header .wrap .menu-toggle {
     display: none;
   }
-  header .menu {
+  header .wrap .menu {
     margin: 0;
     position: inherit;
     right: 3%;
     max-width: 500px;
   }
-  header .menu ul {
+  header .wrap .menu ul {
     visibility: visible;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -653,14 +653,14 @@ section .tab-area + .tab-box .message + a {
     padding-bottom: 0;
     background-color: transparent;
   }
-  header .menu ul li {
+  header .wrap .menu ul li {
     height: 60px;
   }
-  header .menu ul li a {
+  header .wrap .menu ul li a {
     padding: 0 1rem;
     line-height: 60px;
   }
-  header .menu ul li a:hover {
+  header .wrap .menu ul li a:hover {
     background: transparent;
   }
   header.fix .logo {
@@ -825,36 +825,54 @@ section .tab-area + .tab-box .message + a {
     margin-top: 30px;
   }
   #annoying {
-    display: block;
     position: relative;
+    padding: 8rem 0 8rem 40vw;
+    height: 57vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #annoying h3, #annoying .tab-box {
-    width: 50%;
-    margin-left: 50vw;
-    max-width: 500px;
+    width: 70%;
   }
-  #annoying h3 li, #annoying .tab-box li {
+  #annoying h3 ul, #annoying .tab-box ul {
+    width: 100%;
+  }
+  #annoying h3 ul li, #annoying .tab-box ul li {
     text-align: center;
   }
+  #annoying h3 .message, #annoying .tab-box .message {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
   #wrap .tab-area {
-    background-color: skyblue;
     width: 50%;
-    height: 50vw;
     position: absolute;
     top: 0;
-    left: 0;
-    overflow: hidden;
+    left: 6vw;
   }
   #wrap .tab-area figure img {
     width: 50vw;
+    max-width: 600px;
     left: 0;
   }
+  #wrap .tab-area .inner-contents {
+    width: 24vw;
+    height: 47vw;
+    position: absolute;
+    top: 6vw;
+    left: 8vw;
+    overflow: hidden;
+    border-radius: 4vw;
+  }
   #wrap .tab-area .inner-contents img {
-    width: 27vw;
-    top: 7.5vw;
+    top: 0;
+    left: -10vw;
+    max-width: 320px;
   }
   #wrap .tab-area .inner-contents img.on {
-    left: 11vw;
+    left: 16px;
   }
 }
 /*# sourceMappingURL=style_scss.css.map */

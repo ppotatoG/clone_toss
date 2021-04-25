@@ -319,12 +319,12 @@ section .tab-area  {
         img {
             width: 40vw;
             z-index: -1; 
-            transition: right .2s;
+            transition: right .2s, left .2s;
             position: absolute; 
             top: 11.5vw;
-            right: -50vw;
+            left: -50vw;
             &.on {
-                right: calc(50% - 22.5vw);
+                left: calc(50% - 22.5vw);
                 z-index: 1;
             }
         }
@@ -477,29 +477,29 @@ section .tab-area  {
         .wrap {
             max-width: 1000px;
             margin: 0 auto;
-        }
-        .logo {
-            left: 10%;
-            background-image: url(../images/logo-white.svg);
-        }
-        .menu-toggle {display: none;}
-        .menu {
-            margin: 0;
-            position: inherit;
-            right: 3%;
-            max-width: 500px;
-            ul {
-                visibility: visible;
-                display: flex;
-                justify-content: space-between;
-                padding-bottom: 0;
-                background-color: transparent;
-                li {
-                    height: 60px;
-                    a {
-                        padding: 0 1rem; 
-                        line-height: 60px;
-                        &:hover {background: transparent;}
+            .logo {
+                left: 10%;
+                background-image: url(../images/logo-white.svg);
+            }
+            .menu-toggle {display: none;}
+            .menu {
+                margin: 0;
+                position: inherit;
+                right: 3%;
+                max-width: 500px;
+                ul {
+                    visibility: visible;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 0;
+                    background-color: transparent;
+                    li {
+                        height: 60px;
+                        a {
+                            padding: 0 1rem; 
+                            line-height: 60px;
+                            &:hover {background: transparent;}
+                        }
                     }
                 }
             }
@@ -626,32 +626,50 @@ section .tab-area  {
     }
 
     #annoying {
-        display: block;
         position: relative;
+        padding: 8rem 0 8rem 40vw;
+        height: 57vw;
+        justify-content: center;
         & h3, & .tab-box {
-            @include w_50;
-            margin-left: 50vw;
-            max-width: 500px;
-            li {text-align: center;}
+            width: 70%;
+            ul {
+                width: 100%;
+                li {text-align: center;}
+            }
+            .message {
+                width: 100%;
+                margin: 0;
+                text-align: left;
+            }
         }
     }
     #wrap .tab-area {
-        background-color: skyblue;
         @include w_50;
-        height: 50vw;
         position: absolute;
         top: 0;
-        left: 0;
-        overflow: hidden;
+        left: 6vw;
         figure img {
             width: 50vw;
+            max-width: 600px;
             left: 0;
             
         }
-        .inner-contents img {
-            width: 27vw; 
-            top: 7.5vw;
-            &.on { left: 11vw;}
+        .inner-contents {
+            width: 24vw;
+            height: 47vw;
+            position: absolute;
+            top: 6vw;
+            left: 8vw;
+            overflow: hidden;
+            border-radius: 4vw;
+            img {
+                top: 0;
+                left: -10vw;
+                max-width: 320px;
+                &.on {
+                    left: 16px;
+                }
+            }
         }
     }
 }
