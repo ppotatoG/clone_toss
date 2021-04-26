@@ -378,6 +378,10 @@ section .remark {
   background: linear-gradient(180deg, #eff0f0 0%, white 100%);
 }
 
+#account {
+  overflow: inherit;
+}
+
 #account .wrap {
   width: 100%;
 }
@@ -400,8 +404,8 @@ section .remark {
   width: 60%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: 2px 4px 32px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 4px 32px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
 }
 
 #account .wrap > div .money {
@@ -473,6 +477,7 @@ section .tab-area + .tab-box .menu ul {
 
 section .tab-area + .tab-box .menu ul li {
   width: 33%;
+  text-align: center;
   padding: .5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -521,43 +526,61 @@ section .tab-area + .tab-box .message + a {
 
 #toss-pay .video-wrap {
   overflow: hidden;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   position: relative;
   height: 410px;
-}
-
-#toss-pay .video-wrap figure {
   margin: 5rem 0;
 }
 
-#toss-pay .video-wrap figure > img {
-  width: 400px;
-  margin: 0 auto;
+#toss-pay .video-wrap img {
+  width: 364px;
+  position: absolute;
+  top: 5px;
+  left: 22px;
+  z-index: 1;
 }
 
-#toss-pay .video-wrap > video {
+#toss-pay .video-wrap video {
   position: absolute;
   top: 61px;
-  left: 0;
+  left: -1px;
   width: 100%;
   height: 100%;
 }
 
+#card .wrap {
+  width: 100%;
+}
+
 #card .wrap figure {
   max-width: 4rem;
+  width: 30%;
 }
 
-#card .wrap figure > div {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+#card .wrap .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  margin: 2rem auto 0;
+  border-radius: 15px;
+  padding: 2rem 4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
 }
 
-#card .wrap figure > div > div {
-  width: 70%;
-  padding-left: 3rem;
+#card .wrap .box .text-box {
   text-align: left;
+  width: 70%;
 }
 
 #footer {
@@ -585,9 +608,10 @@ section .tab-area + .tab-box .message + a {
 
 #footer a {
   display: inline-block;
+  font-weight: 300;
 }
 
-#footer a {
+#footer a:hover {
   text-decoration: underline;
 }
 
@@ -833,58 +857,6 @@ section .tab-area + .tab-box .message + a {
   #account .wrap > div {
     width: 80%;
     margin-top: 30px;
-  }
-  #annoying {
-    position: relative;
-    padding: 8rem 0 8rem 50vw;
-    height: 57vw;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  #annoying h3, #annoying .tab-box {
-    width: 70%;
-  }
-  #annoying h3 ul, #annoying .tab-box ul {
-    width: 100%;
-  }
-  #annoying h3 ul li, #annoying .tab-box ul li {
-    text-align: center;
-    width: auto;
-    margin-left: 20px;
-  }
-  #annoying h3 ul li:first-child, #annoying .tab-box ul li:first-child {
-    margin-left: 0;
-  }
-  #annoying h3 .message, #annoying .tab-box .message {
-    width: 100%;
-    text-align: left;
-  }
-  #wrap .tab-area {
-    width: 50%;
-    position: absolute;
-    top: 0;
-    left: 10vw;
-  }
-  #wrap .tab-area figure img {
-    width: 50vw;
-    max-width: 600px;
-    left: 0;
-  }
-  #wrap .tab-area .inner-contents {
-    width: 24vw;
-    height: 47vw;
-    top: 6vw;
-    left: 8vw;
-    border-radius: 4vw;
-  }
-  #wrap .tab-area .inner-contents img {
-    top: 0;
-    left: -10vw;
-    max-width: 320px;
-  }
-  #wrap .tab-area .inner-contents img.on {
-    left: 16px;
   }
 }
 /*# sourceMappingURL=style_scss.css.map */
