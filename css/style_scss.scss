@@ -448,7 +448,7 @@ section .tab-area  {
         }
     }
     a {
-        display: inline-block;
+        display: inline;
         font-weight: 300;
         &:hover {text-decoration: underline;}
     }
@@ -696,4 +696,27 @@ section .tab-area  {
     //         }
     //     }
     // }
+
+    #footer {
+        & >div{
+            @include center;
+            max-width: 1000px;
+        }
+        padding: 50px;
+        .service {
+            @include flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            ul {
+                margin-top: 0;
+                margin-left: 40px;
+                &:first-child {margin-left: 0;}
+                li {height: auto;}
+            }
+        }
+        .info .matters {
+            @include flex;
+            align-items: flex-start;
+        }
+    }
 }
