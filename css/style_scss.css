@@ -606,7 +606,6 @@ section .tab-area + .tab-box .message + a {
 }
 
 #footer .service ul li {
-  height: 3rem;
   line-height: 3rem;
 }
 
@@ -638,7 +637,6 @@ section .tab-area + .tab-box .message + a {
 }
 
 #footer .info a, #footer .info span {
-  height: 3rem;
   line-height: 3rem;
 }
 

@@ -444,7 +444,6 @@ section .tab-area  {
         margin-top:3rem;
         &:first-child {margin-top:0;}
         li {
-            height: 3rem; 
             line-height: 3rem;
         }
     }
@@ -464,7 +463,6 @@ section .tab-area  {
         margin-top: 3rem;
         ul {margin-top: 3rem;}
         & a, & span {
-            height: 3rem; 
             line-height: 3rem;
         }
         & b, & a, & span {font-size: 1.4rem;}
@@ -718,3 +716,7 @@ section .tab-area  {
         }
     }
 }
+
+//tab-area pc / mo el따로
+//video-wrap html video 공부하고 오기, 반응형
+//mixin()
