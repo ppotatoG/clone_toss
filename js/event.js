@@ -1,8 +1,6 @@
-let header = document.querySelector("header");
-let sticky = header.offsetTop;
-let MobileCTA = document.querySelector('#moblie-cta');
-let wrap = document.querySelector('#wrap');
-let contents = document.querySelector('#contents');
+const header = document.querySelector("header");
+const sticky = header.offsetTop;
+const MobileCTA = document.querySelector('#moblie-cta');
 
 function headerFunction() {
     if (window.pageYOffset > sticky) {
@@ -28,23 +26,23 @@ function responsive() {
 window.addEventListener('resize', responsive)
 window.addEventListener('load', responsive)
 
-let menuBtn=document.querySelector('.menu-toggle');
+const menuBtn=document.querySelector('.menu-toggle');
 
 menuBtn.addEventListener('click', function(){
     this.classList.toggle('on')
 
     if(this.classList.contains('on')) {
-        header.style.background="#fff";
+        header.classList.add("fix");
         this.classList.add('toggle02')
         this.classList.remove('toggle03')
     } else {
-        header.style.background="transparent";
+        header.classList.remove("fix");
         this.classList.remove('toggle02')
         this.classList.add('toggle03')
     }
 });
 
-contents.addEventListener('click', function(e){
+document.addEventListener('click', function(e){
     const istab = e.target.dataset.tab;
     if(istab) {
         const tabParent = e.target.parentNode;
