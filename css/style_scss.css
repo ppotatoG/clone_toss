@@ -416,6 +416,10 @@ section .remark {
   max-width: 2.4rem;
 }
 
+#account .wrap > div.pc {
+  display: none;
+}
+
 section .tab-area {
   position: relative;
   width: 100%;
@@ -700,11 +704,6 @@ section .tab-area + .tab-box .message + a {
   header.fix .logo {
     background-image: url(../images/logo.svg);
   }
-  header.fix .menu {
-    -webkit-transition: background-color .2s;
-    transition: background-color .2s;
-    background-color: #fff;
-  }
   #moblie-cta {
     display: none;
   }
@@ -857,6 +856,11 @@ section .tab-area + .tab-box .message + a {
   #account .wrap > div {
     width: 80%;
     margin-top: 30px;
+  }
+  #account .wrap > div.pc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #footer {
     padding: 50px;

@@ -299,6 +299,7 @@ section {
             .money {font-weight: 600;}
             figure {max-width: 2.4rem;}
         }
+        &>div.pc {display: none;}
     }
 }
 
@@ -528,10 +529,6 @@ section .tab-area  {
         }
         &.fix {
             .logo {background-image: url(../images/logo.svg);}
-            .menu {
-                transition: background-color .2s;
-                background-color: #fff;
-            }
         }
     }
 
@@ -644,6 +641,7 @@ section .tab-area  {
         .wrap >div {
             width: 80%;
             margin-top: 30px;
+            &.pc {display: flex}
         }
     }
 
