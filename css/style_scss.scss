@@ -377,11 +377,13 @@ section .tab-area  {
                 }                
             }
         }
-        .message {
+        .tab-message {
             @include center;
             width: 90%;
             text-align: center; 
             margin-top: 3rem;
+            display: none;
+            &.on{display: block;}
             &+a {margin-top: 3rem;}
         }
     }

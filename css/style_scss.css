@@ -516,15 +516,20 @@ section .tab-area + .tab-box .menu ul li:hover {
   font-weight: 500;
 }
 
-section .tab-area + .tab-box .message {
+section .tab-area + .tab-box .tab-message {
   width: 100%;
   margin: 0 auto;
   width: 90%;
   text-align: center;
   margin-top: 3rem;
+  display: none;
 }
 
-section .tab-area + .tab-box .message + a {
+section .tab-area + .tab-box .tab-message.on {
+  display: block;
+}
+
+section .tab-area + .tab-box .tab-message + a {
   margin-top: 3rem;
 }
 
