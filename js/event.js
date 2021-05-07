@@ -43,7 +43,7 @@ menuBtn.addEventListener('click', function(){
 });
 
 
-let tabBtn = document.querySelectorAll('#annoying .menu li')
+let tabBtn = document.querySelectorAll('#annoying ul li')
 let tabImg = document.querySelectorAll('#annoying .inner-contents img')
 let tabMessage = document.querySelectorAll('#annoying .tab-message')
 
@@ -56,7 +56,7 @@ for(let i = 0; i < tabBtn.length; i++){
 
             let thisDataset = this.dataset.tabName
             let thisImg = document.querySelector('.'+thisDataset)
-            let thisMessage = document.querySelector('.'+thisDataset+'-message')
+            let thisMessage = document.querySelector('.'+thisDataset+'-msg')
 
             this.classList.add('on')
             thisImg.classList.add('on')

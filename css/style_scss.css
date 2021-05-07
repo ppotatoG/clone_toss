@@ -420,14 +420,14 @@ section .remark {
   display: none;
 }
 
-section .tab-area {
+section[data-tab="true"] .img-area {
   position: relative;
   width: 100%;
   height: 70vw;
   overflow: hidden;
 }
 
-section .tab-area figure img {
+section[data-tab="true"] .img-area figure img {
   position: absolute;
   top: 0;
   left: calc( 50% - 35vw);
@@ -435,7 +435,7 @@ section .tab-area figure img {
   width: 76vw;
 }
 
-section .tab-area .inner-contents {
+section[data-tab="true"] .img-area .inner-contents {
   position: absolute;
   top: 11vw;
   left: calc(50% - 17.5vw);
@@ -444,7 +444,7 @@ section .tab-area .inner-contents {
   overflow: hidden;
 }
 
-section .tab-area .inner-contents img {
+section[data-tab="true"] .img-area .inner-contents img {
   width: 40vw;
   z-index: -1;
   -webkit-transition: right .2s, left .2s;
@@ -454,23 +454,18 @@ section .tab-area .inner-contents img {
   left: -50vw;
 }
 
-section .tab-area .inner-contents img.on {
+section[data-tab="true"] .img-area .inner-contents img.on {
   top: 4px;
   left: 0;
   z-index: 1;
 }
 
-section .tab-area + .tab-box {
-  margin-top: 20px;
-  width: 100%;
-}
-
-section .tab-area + .tab-box .menu {
+section[data-tab="true"] .tab-btn {
   width: 100%;
   margin: 0 auto;
 }
 
-section .tab-area + .tab-box .menu ul {
+section[data-tab="true"] .tab-btn ul {
   width: 50vw;
   min-width: 350px;
   display: -webkit-box;
@@ -479,7 +474,7 @@ section .tab-area + .tab-box .menu ul {
   margin: 0 auto;
 }
 
-section .tab-area + .tab-box .menu ul li {
+section[data-tab="true"] .tab-btn ul li {
   width: 33%;
   text-align: center;
   padding: .5rem;
@@ -490,7 +485,7 @@ section .tab-area + .tab-box .menu ul li {
   transition: color .2s, font-weight .2s;
 }
 
-section .tab-area + .tab-box .menu ul li::after {
+section[data-tab="true"] .tab-btn ul li::after {
   content: "";
   display: block;
   width: 0%;
@@ -501,22 +496,22 @@ section .tab-area + .tab-box .menu ul li::after {
   margin-top: 1rem;
 }
 
-section .tab-area + .tab-box .menu ul li.on {
+section[data-tab="true"] .tab-btn ul li.on {
   color: #444;
   font-weight: 500;
   width: 33%;
 }
 
-section .tab-area + .tab-box .menu ul li.on::after {
+section[data-tab="true"] .tab-btn ul li.on::after {
   width: 100%;
 }
 
-section .tab-area + .tab-box .menu ul li:hover {
+section[data-tab="true"] .tab-btn ul li:hover {
   color: #444;
   font-weight: 500;
 }
 
-section .tab-area + .tab-box .tab-message {
+section[data-tab="true"] .tab-message {
   width: 100%;
   margin: 0 auto;
   width: 90%;
@@ -525,11 +520,11 @@ section .tab-area + .tab-box .tab-message {
   display: none;
 }
 
-section .tab-area + .tab-box .tab-message.on {
+section[data-tab="true"] .tab-message.on {
   display: block;
 }
 
-section .tab-area + .tab-box .tab-message + a {
+section[data-tab="true"] .tab-message + a {
   margin-top: 3rem;
 }
 
