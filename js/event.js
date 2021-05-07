@@ -18,52 +18,16 @@ window.addEventListener('load', headerFunction)
 let imgArea = document.querySelector('#annoying .img-area')
 let pcPerent = document.querySelector('#annoying .img-wrap')
 let moPerent = document.querySelector('#annoying .wrap')
-
-function goMO(){
-    
-    const mochilds = moPerent.childNodes
-    const pcchilds = pcPerent.childNodes
-
-    console.log(pcchilds)
-
-    for(let i = 0; i < pcchilds.length ; i++){
-        
-        let hasImgArea = pcchilds[i].classList=='img-area'
-        let delImgArea = moPerent.querySelector('.img-area')
-
-        if(hasImgArea) {
-            moPerent.removeChild(delImgArea)
-            console.log("tlqkf")
-        }else {
-            pcPerent.insertBefore(imgArea, null)
-            console.log('dn')
-        }
-    }
-}
-goMO()
-
-function goPC(){
-    
-    const mochilds = moPerent.childNodes
-
-    for(let i = 0; i < mochilds.length ; i++){
-
-        let hasImgArea = mochilds[i].classList=='img-area'
-        let delImgArea = moPerent.querySelector('.img-area')
-
-        if(hasImgArea) console.dir(delImgArea)
-        else pcPerent.insertBefore(imgArea, null) 
-    }
-}
-goPC()
-
+let insPoint = document.querySelector('#annoying h3')
 
 function responsive() {
     const tossCardImg = document.querySelector('#toss-card figure img')
     if(window.innerWidth>786) {
         tossCardImg.src="images/tosscard-plcc-desktop.png"
+        pcPerent.insertBefore(imgArea, null)
     }else {
         tossCardImg.src="images/tosscard-plcc-mobile.png"
+        moPerent.insertBefore(imgArea, insPoint)
     }
 }
 window.addEventListener('resize', responsive)
