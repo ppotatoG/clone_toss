@@ -644,7 +644,7 @@ section[data-tab="true"] {
         }
     }
 
-    #annoying {
+    section[data-tab="true"] {
         @include flex;
         @include center;
         flex-direction: inherit;
