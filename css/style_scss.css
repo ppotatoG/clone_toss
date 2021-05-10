@@ -425,6 +425,7 @@ section[data-tab="true"] .img-area {
   width: 100%;
   height: 70vw;
   overflow: hidden;
+  margin-left: -3vw;
 }
 
 section[data-tab="true"] .img-area figure img {
@@ -860,7 +861,7 @@ section[data-tab="true"] .tab-message + a {
     display: -ms-flexbox;
     display: flex;
   }
-  #annoying .wrap {
+  #annoying {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -870,6 +871,45 @@ section[data-tab="true"] .tab-message + a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
+    width: 80%;
+    max-width: 1000px;
+  }
+  #annoying > div {
+    width: 50%;
+  }
+  #annoying .img-area figure img {
+    width: 45vw;
+    left: 0;
+  }
+  #annoying .img-area .inner-contents {
+    top: 7vw;
+    left: 10vw;
+    width: 24vw;
+  }
+  #annoying .img-area .inner-contents img {
+    width: 100%;
+  }
+  #annoying .img-area .inner-contents img.on {
+    top: -3px;
+  }
+  #annoying .inner > * {
+    margin-top: 2vw;
+  }
+  #annoying .inner > *:first-child {
+    margin-top: 0;
+  }
+  #annoying .inner ul {
+    width: 100%;
+  }
+  #annoying .inner .message-box span {
+    margin: 0;
+    text-align: left;
   }
   #footer {
     padding: 50px;

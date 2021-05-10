@@ -309,6 +309,7 @@ section[data-tab="true"] {
         width: 100%;
         height: 70vw;
         overflow: hidden;
+        margin-left: -3vw;
         figure {
             img {
                 position: absolute;
@@ -644,7 +645,42 @@ section[data-tab="true"] {
     }
 
     #annoying {
-        .wrap {@include flex;}
+        @include flex;
+        @include center;
+        flex-direction: inherit;
+        width: 80%;
+        max-width: 1000px;
+        & >div{width: 50%;}
+        .img-area {
+            figure {
+                img {
+                    width: 45vw;
+                    left: 0;
+                }
+            }
+            .inner-contents {
+                top: 7vw;
+                left: 10vw;
+                width: 24vw;
+                img {
+                    width: 100%;
+                    &.on {top: -3px;}
+                }
+            }
+        }
+        .inner {
+            & >*{margin-top: 2vw;}
+            & >*:first-child{margin-top: 0;}
+            ul {
+                width: 100%;
+            }
+            .message-box {
+                span {
+                    margin: 0;
+                    text-align: left;
+                }
+            }
+        }
     }
 
     #footer {
