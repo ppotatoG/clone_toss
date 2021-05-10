@@ -1,13 +1,13 @@
-const header = document.querySelector("header");
-const sticky = header.offsetTop;
-const MobileCTA = document.querySelector('#moblie-cta');
+const header = document.querySelector("header")
+const sticky = header.offsetTop
+const MobileCTA = document.querySelector('#moblie-cta')
 
 function headerFunction() {
     if (window.pageYOffset > sticky) {
         header.classList.add("fix")
         MobileCTA.style.bottom=0+"px"
     } else {
-        header.classList.remove("fix");
+        header.classList.remove("fix")
         MobileCTA.style.bottom=60+"px"
     }
 }
@@ -33,21 +33,21 @@ function responsive() {
 window.addEventListener('resize', responsive)
 window.addEventListener('load', responsive)
 
-const menuBtn=document.querySelector('.menu-toggle');
+const menuBtn=document.querySelector('.menu-toggle')
 
 menuBtn.addEventListener('click', function(){
     this.classList.toggle('on')
 
     if(this.classList.contains('on')) {
-        header.classList.add("fix");
+        header.classList.add("fix")
         this.classList.add('toggle02')
         this.classList.remove('toggle03')
     } else {
-        header.classList.remove("fix");
+        header.classList.remove("fix")
         this.classList.remove('toggle02')
         this.classList.add('toggle03')
     }
-});
+})
 
 
 let tabBtn = document.querySelectorAll('#annoying ul li')
