@@ -16,9 +16,9 @@ window.addEventListener('scroll', headerFunction)
 window.addEventListener('load', headerFunction)
 
 let imgArea = document.querySelector('#annoying .img-area')
-let pcPerent = document.querySelector('#annoying .img-wrap')
-let moPerent = document.querySelector('#annoying .wrap')
-let insPoint = document.querySelector('#annoying h3')
+let pcPerent = document.querySelector('#annoying .img-box')
+let moPerent = document.querySelector('#annoying .inner')
+let insPoint = document.querySelector('#annoying .tab-btn')
 
 function responsive() {
     const tossCardImg = document.querySelector('#toss-card figure img')

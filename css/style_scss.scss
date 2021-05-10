@@ -643,55 +643,9 @@ section[data-tab="true"] {
         }
     }
 
-    // #annoying {
-    //     position: relative;
-    //     padding: 8rem 0 8rem 50vw;
-    //     height: 57vw;
-    //     justify-content: center;
-    //     & h3, & .tab-box {
-    //         width: 70%;
-    //         ul {
-    //             width: 100%;
-    //             li {
-    //                 text-align: center;
-    //                 width: auto;
-    //                 margin-left: 20px;
-    //                 &:first-child {margin-left: 0;}
-    //             }
-    //         }
-    //         .message {
-    //             width: 100%;
-    //             text-align: left;
-    //         }
-    //     }
-    // }
-    // #wrap .tab-area {
-    //     @include w_50;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 10vw;
-    //     figure img {
-    //         width: 50vw;
-    //         max-width: 600px;
-    //         left: 0;
-            
-    //     }
-    //     .inner-contents {
-    //         width: 17vw;
-    //         height: 47vw;
-    //         top: 4.6vw;
-    //         left: 7vw;
-    //         border-radius: 2vw;
-    //         img {
-    //             top: 0;
-    //             left: -10vw;
-    //             max-width: 320px;
-    //             &.on {
-    //                 left: 0px;
-    //             }
-    //         }
-    //     }
-    // }
+    #annoying {
+        .wrap {@include flex;}
+    }
 
     #footer {
         & >div{
