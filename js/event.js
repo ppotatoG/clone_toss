@@ -3,9 +3,11 @@ const sticky = header.offsetTop
 const MobileCTA = document.querySelector('#moblie-cta')
 
 function headerFunction() {
+
     if (window.pageYOffset > sticky) {
         header.classList.add("fix")
         MobileCTA.style.bottom=0+"px"
+
     } else {
         header.classList.remove("fix")
         MobileCTA.style.bottom=60+"px"
@@ -15,19 +17,25 @@ function headerFunction() {
 window.addEventListener('scroll', headerFunction)
 window.addEventListener('load', headerFunction)
 
-let imgArea = document.querySelector('#annoying .img-area')
-let pcPerent = document.querySelector('#annoying .img-box')
-let moPerent = document.querySelector('#annoying .inner')
-let insPoint = document.querySelector('#annoying .tab-btn')
+const imgAreas = document.querySelectorAll('section[data-tab="true"] .img-area')
+const pcPerents = document.querySelectorAll('section[data-tab="true"] .img-box')
+const moPerents = document.querySelectorAll('section[data-tab="true"] .inner')
+const insPoints = document.querySelectorAll('section[data-tab="true"] .tab-btn')
 
 function responsive() {
     const tossCardImg = document.querySelector('#toss-card figure img')
+
     if(window.innerWidth>786) {
         tossCardImg.src="images/tosscard-plcc-desktop.png"
-        pcPerent.insertBefore(imgArea, null)
+        for(let i = 0; i < imgAreas.length; i++){
+            pcPerents[i].insertBefore(imgAreas[i], null)
+        }
+
     }else {
         tossCardImg.src="images/tosscard-plcc-mobile.png"
-        moPerent.insertBefore(imgArea, insPoint)
+        for(let i = 0; i < imgAreas.length; i++){
+            moPerents[i].insertBefore(imgAreas[i], insPoints[i])
+        }
     }
 }
 window.addEventListener('resize', responsive)
@@ -73,5 +81,4 @@ function tabFnc(e){
     e.classList.add('on')
     dataSelect.classList.add('on')
     dataSelectMsg.classList.add('on')
-
 }
