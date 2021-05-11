@@ -883,14 +883,17 @@ section[data-tab="true"] .tab-message + a {
   section[data-tab="true"] > div {
     width: 50%;
   }
+  section[data-tab="true"] .img-area {
+    height: 700px;
+  }
   section[data-tab="true"] .img-area figure img {
-    width: 45vw;
+    width: 500px;
     left: 0;
   }
   section[data-tab="true"] .img-area .inner-contents {
-    top: 7vw;
-    left: 10vw;
-    width: 24vw;
+    top: 78px;
+    left: 116px;
+    max-width: 260px;
   }
   section[data-tab="true"] .img-area .inner-contents img {
     width: 100%;

@@ -652,16 +652,17 @@ section[data-tab="true"] {
         max-width: 1000px;
         & >div{width: 50%;}
         .img-area {
+            height: 700px;
             figure {
                 img {
-                    width: 45vw;
+                    width: 500px;
                     left: 0;
                 }
             }
             .inner-contents {
-                top: 7vw;
-                left: 10vw;
-                width: 24vw;
+                top: 78px;
+                left: 116px;
+                max-width: 260px;
                 img {
                     width: 100%;
                     &.on {top: -3px;}
