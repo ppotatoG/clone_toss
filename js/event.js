@@ -82,3 +82,13 @@ function tabFnc(e){
     dataSelect.classList.add('on')
     dataSelectMsg.classList.add('on')
 }
+
+// 반응형 img url +"_3x"
+// min-height 
+// #toss-card figure positioning
+// #account 소수점
+// #toss-pay video positioning
+// #card style 생각나는데로라도...
+// tab-area 각자 다른 디자인..
+// tab-area massege
+// tab-area li.btn line-height, cursor
