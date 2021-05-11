@@ -105,7 +105,7 @@
                 </div>   
             </section>
 
-            <section id="annoying" data-tab="true">
+            <section id="transfer" data-tab="true">
                 <div class="img-box"></div>
                 <div class="inner">
                     <h3>송금은 귀찮지만<br>토스는 쉽습니다</h3>
@@ -208,7 +208,7 @@
                 </div>
             </section>
 
-            <section id="insurance">
+            <section id="insurance" data-tab="true">
                 <div class="img-box"></div>
                 <div class="inner">
                     <h3>송금은 귀찮지만<br>토스는 쉽습니다</h3>
@@ -217,72 +217,57 @@
                             <img src="images/iphone_1x.png" alt="휴대폰 이미지">
                         </figure>       
                         <div class="inner-contents">
-                            <img class="contacts on" src="images/transfer-contacts.png" alt="연락처로 송금 기능">
-                            <img class="sagi" src="images/transfer-sagi.png" alt="사기 계좌 조회 기능">
-                            <img class="message" src="images/transfer-message.png" alt="송금 메세지 기능">
+                            <img class="my on" src="images/insurance-my.png" alt="내 보험 조회 기능">
+                            <img class="return" src="images/insurance-return.png" alt="병원비 돌려받기 기능">
+                            <img class="mini" src="images/insurance-mini.png" alt="인기 보험 확인 기능">
                         </div>                                     
                     </div>
                     <div class="tab-btn">
                         <ul>
-                            <li data-tab-name="contacts" class="on">연락처로 송금</li>
-                            <li data-tab-name="sagi">사기 계좌 조회</li>
-                            <li data-tab-name="message">송금 메세지</li>
+                            <li data-tab-name="my" class="on" onclick="tabFnc(this)">내 보험 조회</li>
+                            <li data-tab-name="return" onclick="tabFnc(this)">병원비 돌려받기</li>
+                            <li data-tab-name="mini" onclick="tabFnc(this)">인기 보험 확인</li>
                         </ul>
                     </div>
                     <div class="message-box">
-                        <span class="tab-message on contacts-msg">계좌번호를 몰라도 연락처만으로 송금할 수 있습니다.</span>
-                        <span class="tab-message sagi-msg">송금하는 계좌에 피해 사례가 있는지 확인할 수 있습니다.</span>
-                        <span class="tab-message message-msg">받는분에게 마음을 전해보세요.</span>
+                        <span class="tab-message on my-msg">내 보험 조회 기능.</span>
+                        <span class="tab-message return-msg">병원비 돌려받기 기능.</span>
+                        <span class="tab-message mini-msg">인기 보험 확인.</span>
                     </div>
                     <a href="#" class="plus">자세히 알아보기</a>
-                </div>    
-                <h3>보험은 어렵지만<br>토스는 쉽습니다</h3>
-                <div class="tab-area">
-                    <figure>
-                        <img src="images/iphone_1x.png" alt="휴대폰 이미지">
-                    </figure>                    
-                    <div class="inner-contents">
-                        <img class="my on" src="images/insurance-my.png" alt="내 보험 조회">
-                        <img class="return" src="images/insurance-return.png" alt="병원비 돌려받기">
-                        <img class="mini" src="images/insurance-mini.png" alt="미니보험">
-                    </div>
-                </div>
-                <div class="tab-box">
-                    <div class="menu">
-                        <ul>
-                            <li data-tab-name="my" data-tab="true" class="on">내 보험 조회</li>
-                            <li data-tab-name="return" data-tab="true">병원비 돌려받기</li>
-                            <li data-tab-name="mini" data-tab="true">미니보험</li>
-                        </ul>
-                    </div>
-                    <span class="message">계좌번호를 몰라도 연락처만으로 송금할 수 있습니다.</span>
-                    <a href="#" class="plus">자세히 알아보기</a>
-                </div>                    
+                </div>           
             </section>
 
-            <section id="insurance">
-                <h3>생활 속 편의기능<br>토스에 있습니다</h3>
-                <div class="tab-area">
-                    <figure>
-                        <img src="images/iphone_1x.png" alt="휴대폰 이미지">
-                    </figure>                    
-                    <div class="inner-contents">
-                        <img class="dutchpay on" src="images/wallet-dutchpay.png" alt="더치페이">
-                        <img class="atm" src="images/wallet-atm.png" alt="ATM 출금">
-                        <img class="exchange" src="images/wallet-exchange.png" alt="환전">
+            <section id="wallet" data-tab="true">
+                <div class="img-box"></div>
+                <div class="inner">
+                    <h3>생활 속 편의기능<br>토스에 있습니다</h3>
+                    <div class="img-area">
+                        <figure>
+                            <img src="images/iphone_1x.png" alt="휴대폰 이미지">
+                        </figure>                    
+                        <div class="inner-contents">
+                            <img class="dutchpay on" src="images/wallet-dutchpay.png" alt="더치페이">
+                            <img class="atm" src="images/wallet-atm.png" alt="ATM 출금">
+                            <img class="exchange" src="images/wallet-exchange.png" alt="환전">
+                        </div>
                     </div>
-                </div>
-                <div class="tab-box">
-                    <div class="menu">
+                    <div class="tab-btn">
                         <ul>
-                            <li data-tab-name="dutchpay" data-tab="true" class="on">더치페이</li>
-                            <li data-tab-name="atm" data-tab="true">ATM 출금</li>
-                            <li data-tab-name="exchange" data-tab="true">환전</li>
+                            <li data-tab-name="dutchpay" class="on" onclick="tabFnc(this)">더치페이</li>
+                            <li data-tab-name="atm" onclick="tabFnc(this)">ATM 출금</li>
+                            <li data-tab-name="exchange" onclick="tabFnc(this)">환전</li>
                         </ul>
                     </div>
-                    <span class="message">더치페이할 때도 직접 계한하지 말고 쉽게 주고받으세요.</span>
+                    <div class="message-box">
+                        <span class="tab-message on dutchpay-msg">더치페이할 때도 직접 계한하지 말고 쉽게 주고받으세요.</span>
+                        <span class="tab-message atm-msg">atm.</span>
+                        <span class="tab-message exchange-msg">exchange.</span>
+                    </div>
                     <a href="#" class="plus">자세히 알아보기</a>
-                </div>                    
+                </div>          
+            </div>
+                          
             </section>
         </div>
 
