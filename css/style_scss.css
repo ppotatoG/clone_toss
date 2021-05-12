@@ -484,6 +484,9 @@ section[data-tab="true"] .tab-btn ul li {
   color: #888;
   -webkit-transition: color .2s, font-weight .2s;
   transition: color .2s, font-weight .2s;
+  height: 4rem;
+  line-height: 3rem;
+  cursor: pointer;
 }
 
 section[data-tab="true"] .tab-btn ul li::after {
@@ -707,7 +710,7 @@ section[data-tab="true"] .tab-message + a {
     display: none;
   }
   section {
-    min-height: 90vh;
+    min-height: 80vh;
     text-align: left;
   }
   section h3 {
@@ -808,11 +811,11 @@ section[data-tab="true"] .tab-message + a {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
+    width: 80%;
   }
-  #award .flex-box {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+  #award ul li {
+    width: 33%;
+    max-width: 200px;
   }
   #award p {
     text-align: left;

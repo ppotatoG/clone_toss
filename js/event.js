@@ -83,10 +83,17 @@ function tabFnc(e){
     dataSelectMsg.classList.add('on')
 }
 
+const mNum = document.querySelectorAll('.money')
+
+for(let i = 0; i < mNum.length; i++){
+    chngMNum = mNum[i].textContent.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    mNum[i].textContent = chngMNum+"원"
+}
+
+
 // 반응형 img url +"_3x"
 // min-height 
 // #toss-card figure positioning
-// #account 소수점
 // #toss-pay video positioning
 // #card style 생각나는데로라도...
 // tab-area 각자 다른 디자인..

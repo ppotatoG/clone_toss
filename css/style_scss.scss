@@ -355,6 +355,9 @@ section[data-tab="true"] {
                 box-sizing: border-box; 
                 color: #888; 
                 transition: color .2s, font-weight .2s;
+                height: 4rem;
+                line-height: 3rem;
+                cursor: pointer;
                 &::after {
                     content: "";
                     display: block;
@@ -534,7 +537,7 @@ section[data-tab="true"] {
     #moblie-cta {display: none;}
 
     section {
-        min-height: 90vh;
+        min-height: 80vh;
         text-align: left;
         h3 {
             font-size: 5rem;
@@ -600,8 +603,14 @@ section[data-tab="true"] {
         max-width: 1000px;
         margin: 0 auto;
         }
-        ul {justify-content: left;}
-        .flex-box {align-items: flex-end;}
+        ul {
+            justify-content: left;
+            width: 80%;
+            li {
+                width: 33%;
+                max-width: 200px;
+            }
+        }
         p {
             text-align: left;
             margin-top: 5rem;
