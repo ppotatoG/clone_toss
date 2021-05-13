@@ -97,5 +97,4 @@ for(let i = 0; i < mNum.length; i++){
 // #toss-pay video positioning
 // #card style 생각나는데로라도...
 // tab-area 각자 다른 디자인..
-// tab-area massege
 // tab-area li.btn line-height, cursor
