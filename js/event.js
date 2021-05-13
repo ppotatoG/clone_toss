@@ -90,9 +90,14 @@ for(let i = 0; i < mNum.length; i++){
     mNum[i].textContent = chngMNum+"원"
 }
 
+// const elImg = document.querySelectorAll('img')
+// const png = 'png';
 
-// 반응형 img url +"_3x"
-// min-height 
-// #toss-pay video positioning
-// #card style 생각나는데로라도...
-// tab-area 각자 다른 디자인..
+// for(let i = 0; i < elImg.length; i++){
+//     if(elImg[i].src.indexOf(png) ) {
+//         console.log()
+//     }else false;
+// }
+
+// if(elImg[12].src.indexOf(png)) console.log("dd")
+// else console.log('ss')
