@@ -512,6 +512,7 @@ section[data-tab="true"] {
                 position: inherit;
                 right: 3%;
                 max-width: 500px;
+                z-index: 1;
                 ul {
                     visibility: visible;
                     display: flex;

@@ -681,6 +681,7 @@ section[data-tab="true"] .tab-message + a {
     position: inherit;
     right: 3%;
     max-width: 500px;
+    z-index: 1;
   }
   header .wrap .menu ul {
     visibility: visible;
