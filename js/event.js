@@ -1,6 +1,6 @@
 const header = document.querySelector("header")
 const sticky = header.offsetTop
-const MobileCTA = document.querySelector('#moblie-cta')
+const MobileCTA = document.querySelector('#mobile-cta')
 
 function headerFunction() {
 
