@@ -917,6 +917,70 @@ section[data-tab="true"] .tab-message + a {
     margin: 0;
     text-align: left;
   }
+  #inquiry {
+    background-color: #f8f8f8;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+  }
+  #inquiry > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: 80%;
+    max-width: 1000px;
+  }
+  #inquiry > div > div {
+    width: 50%;
+  }
+  #wallet {
+    background-image: url(../images/wallet_bg.jpg);
+    background-repeat: repeat-x;
+    background-color: #3182f6;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+  }
+  #wallet > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    max-width: 1000px;
+  }
+  #wallet > div > div {
+    width: 50%;
+  }
+  #wallet > div *, #wallet > div a.plus::after {
+    color: #fff;
+  }
+  #wallet > div li::after {
+    background-color: #fff;
+  }
   #footer {
     padding: 50px;
   }

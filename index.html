@@ -178,33 +178,36 @@
             </section>
 
             <section id="inquiry" data-tab="true">
-                <div class="img-box"></div>
-                <div class="inner">
-                    <h3>신용 관리는 힘들지만<br>토스는 쉽습니다</h3>
-                    <div class="img-area">
-                        <figure>
-                            <img src="images/iphone_1x.png" alt="휴대폰 이미지">
-                        </figure>       
-                        <div class="inner-contents">
-                            <img class="view on" src="images/inquiry-view.png" alt="신용점수 조회">
-                            <img class="broker" src="images/inquiry-broker.png" alt="내게 맞는 대출 찾기">
-                            <img class="cardrecommend" src="images/inquiry-cardrecommend.png" alt="카드 혜택 추천">
-                        </div>    
+                <div>
+                    <div class="img-box"></div>
+                    <div class="inner">
+                        <h3>신용 관리는 힘들지만<br>토스는 쉽습니다</h3>
+                        <div class="img-area">
+                            <figure>
+                                <img src="images/iphone_1x.png" alt="휴대폰 이미지">
+                            </figure>       
+                            <div class="inner-contents">
+                                <img class="view on" src="images/inquiry-view.png" alt="신용점수 조회">
+                                <img class="broker" src="images/inquiry-broker.png" alt="내게 맞는 대출 찾기">
+                                <img class="cardrecommend" src="images/inquiry-cardrecommend.png" alt="카드 혜택 추천">
+                            </div>    
+                        </div>
+                        <div class="tab-btn">
+                            <ul>
+                                <li data-tab-name="view" class="on" onclick="tabFnc(this)">신용점수 조회</li>
+                                <li data-tab-name="broker" onclick="tabFnc(this)">내게 맞는 대출 찾기</li>
+                                <li data-tab-name="cardrecommend" onclick="tabFnc(this)">카드 혜택 추천</li>
+                            </ul>
+                        </div>
+                        <div class="message-box">
+                            <span class="tab-message on view-msg">복잡한 과정 없이 무료로 신용점수를 확인할 수 있습니다.</span>
+                            <span class="tab-message broker-msg">대출 상품을 간편하게 비교해보고 꼭 맞는 대출을 찾을 수 있습니다.</span>
+                            <span class="tab-message cardrecommend-msg">내게 맞는 혜택을 제공하는 신용카드를 추천 받을 수 있습니다.</span>
+                        </div>
+                        <a href="#" class="plus">자세히 알아보기</a>
                     </div>
-                    <div class="tab-btn">
-                        <ul>
-                            <li data-tab-name="view" class="on" onclick="tabFnc(this)">신용점수 조회</li>
-                            <li data-tab-name="broker" onclick="tabFnc(this)">내게 맞는 대출 찾기</li>
-                            <li data-tab-name="cardrecommend" onclick="tabFnc(this)">카드 혜택 추천</li>
-                        </ul>
-                    </div>
-                    <div class="message-box">
-                        <span class="tab-message on view-msg">복잡한 과정 없이 무료로 신용점수를 확인할 수 있습니다.</span>
-                        <span class="tab-message broker-msg">대출 상품을 간편하게 비교해보고 꼭 맞는 대출을 찾을 수 있습니다.</span>
-                        <span class="tab-message cardrecommend-msg">내게 맞는 혜택을 제공하는 신용카드를 추천 받을 수 있습니다.</span>
-                    </div>
-                    <a href="#" class="plus">자세히 알아보기</a>
                 </div>
+                
             </section>
 
             <section id="insurance" data-tab="true">
@@ -238,33 +241,35 @@
             </section>
 
             <section id="wallet" data-tab="true">
-                <div class="img-box"></div>
-                <div class="inner">
-                    <h3>생활 속 편의기능<br>토스에 있습니다</h3>
-                    <div class="img-area">
-                        <figure>
-                            <img src="images/iphone_1x.png" alt="휴대폰 이미지">
-                        </figure>                    
-                        <div class="inner-contents">
-                            <img class="dutchpay on" src="images/wallet-dutchpay.png" alt="더치페이">
-                            <img class="atm" src="images/wallet-atm.png" alt="ATM 출금">
-                            <img class="exchange" src="images/wallet-exchange.png" alt="환전">
+                <div>
+                    <div class="img-box"></div>
+                    <div class="inner">
+                        <h3>생활 속 편의기능<br>토스에 있습니다</h3>
+                        <div class="img-area">
+                            <figure>
+                                <img src="images/iphone_1x.png" alt="휴대폰 이미지">
+                            </figure>                    
+                            <div class="inner-contents">
+                                <img class="dutchpay on" src="images/wallet-dutchpay.png" alt="더치페이">
+                                <img class="atm" src="images/wallet-atm.png" alt="ATM 출금">
+                                <img class="exchange" src="images/wallet-exchange.png" alt="환전">
+                            </div>
                         </div>
-                    </div>
-                    <div class="tab-btn">
-                        <ul>
-                            <li data-tab-name="dutchpay" class="on" onclick="tabFnc(this)">더치페이</li>
-                            <li data-tab-name="atm" onclick="tabFnc(this)">ATM 출금</li>
-                            <li data-tab-name="exchange" onclick="tabFnc(this)">환전</li>
-                        </ul>
-                    </div>
-                    <div class="message-box">
-                        <span class="tab-message on dutchpay-msg">더치페이할 때도 직접 계한하지 말고 쉽게 주고받으세요.</span>
-                        <span class="tab-message atm-msg">카드 없이도 ATM에서 출금할 수 있습니다.</span>
-                        <span class="tab-message exchange-msg">최대 100% 환율 우대로 저렴하게 환전할 수 있습니다.</span>
-                    </div>
-                    <a href="#" class="plus">자세히 알아보기</a>
-                </div>          
+                        <div class="tab-btn">
+                            <ul>
+                                <li data-tab-name="dutchpay" class="on" onclick="tabFnc(this)">더치페이</li>
+                                <li data-tab-name="atm" onclick="tabFnc(this)">ATM 출금</li>
+                                <li data-tab-name="exchange" onclick="tabFnc(this)">환전</li>
+                            </ul>
+                        </div>
+                        <div class="message-box">
+                            <span class="tab-message on dutchpay-msg">더치페이할 때도 직접 계한하지 말고 쉽게 주고받으세요.</span>
+                            <span class="tab-message atm-msg">카드 없이도 ATM에서 출금할 수 있습니다.</span>
+                            <span class="tab-message exchange-msg">최대 100% 환율 우대로 저렴하게 환전할 수 있습니다.</span>
+                        </div>
+                        <a href="#" class="plus">자세히 알아보기</a>
+                    </div>       
+                </div>                   
             </div>
                           
             </section>

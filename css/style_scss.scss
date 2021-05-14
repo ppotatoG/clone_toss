@@ -693,6 +693,41 @@ section[data-tab="true"] {
         }
     }
 
+    #inquiry {
+        background-color: rgb(248, 248, 248);
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        & >div{
+            @include flex;
+            @include center;
+            flex-direction: row-reverse;
+            width: 80%;
+            max-width: 1000px;
+            & >div{width: 50%;}
+        }
+    }
+
+    #wallet{
+        background: {
+            image: url(../images/wallet_bg.jpg);
+            repeat: repeat-x;
+            color: $ci-color;
+        }
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        & >div{
+            @include flex;
+            @include center;
+            flex-direction: column;
+            width: 80%;
+            max-width: 1000px;
+            & >div{width: 50%;}
+            *, a.plus::after {color: $white;}
+            li::after{background-color: $white;}
+        }
+    }
     #footer {
         & >div{
             @include center;
