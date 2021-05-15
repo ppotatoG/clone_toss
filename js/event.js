@@ -90,14 +90,13 @@ for(let i = 0; i < mNum.length; i++){
     mNum[i].textContent = chngMNum+"원"
 }
 
-// const elImg = document.querySelectorAll('img')
-// const png = 'png';
+const elImg = document.querySelectorAll('img')
+const png = 'png';
 
-// for(let i = 0; i < elImg.length; i++){
-//     if(elImg[i].src.indexOf(png) ) {
-//         console.log()
-//     }else false;
-// }
-
-// if(elImg[12].src.indexOf(png)) console.log("dd")
-// else console.log('ss')
+for(let i = 0; i < elImg.length; i++){
+    if(elImg[i].src.includes(png) ) { 
+    //if(elImg[i].src.indexOf(png) > -1 ) { 
+        // png가 없으면 indexOf 에서 -1을 반환  
+        console.log(elImg[i])
+    }
+}
