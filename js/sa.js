@@ -1,5 +1,5 @@
 window.addEventListener('scroll', () => {
-    const saNodes = document.querySelectorAll('.box');
+    const saNodes = document.querySelectorAll('.sa');
     const point = window.innerHeight;
     for ( const saNode of saNodes){
         const rect = saNode.getBoundingClientRect();
