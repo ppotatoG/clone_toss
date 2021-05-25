@@ -91,13 +91,16 @@ for(let i = 0; i < mNum.length; i++){
 }
 
 const elImg = document.querySelectorAll('img')
-const png = 'png';
-
-console.log(elImg[0].src)
-
 
 for(let i = 0; i < elImg.length; i++){
-    (function(){
+    if(elImg[i].src.indexOf('_1x') > -1) {
+        elImg[i].src = elImg[i].src.replace('_1x.png', '_3x.png')
+
+    } else{
         elImg[i].src = elImg[i].src.replace('.png', '_3x.png')
-    }())
+    }
+
+    elImg[i].addEventListener('error', function(){
+        elImg[i].src = elImg[i].src.replace('_3x.png', '.png')
+    })
 }
