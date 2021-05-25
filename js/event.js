@@ -93,17 +93,11 @@ for(let i = 0; i < mNum.length; i++){
 const elImg = document.querySelectorAll('img')
 const png = 'png';
 
+console.log(elImg[0].src)
+
+
 for(let i = 0; i < elImg.length; i++){
-    // if(elImg[i].src.indexOf(png) > -1 ) { 
-    //     (function(){
-    //         console.dir(elImg[i].src.splice(-4, 0, '_3x'))
-    //     }())
-    // }
-
     (function(){
-        const elImgSrc = elImg[i].src.replace('.png', '_3x.png')
-
-        console.log(elImgSrc)
+        elImg[i].src = elImg[i].src.replace('.png', '_3x.png')
     }())
 }
-
