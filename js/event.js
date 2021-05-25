@@ -94,9 +94,16 @@ const elImg = document.querySelectorAll('img')
 const png = 'png';
 
 for(let i = 0; i < elImg.length; i++){
-    if(elImg[i].src.includes(png) ) { 
-    //if(elImg[i].src.indexOf(png) > -1 ) { 
-        // png가 없으면 indexOf 에서 -1을 반환  
-        console.log(elImg[i])
-    }
+    // if(elImg[i].src.indexOf(png) > -1 ) { 
+    //     (function(){
+    //         console.dir(elImg[i].src.splice(-4, 0, '_3x'))
+    //     }())
+    // }
+
+    (function(){
+        const elImgSrc = elImg[i].src.replace('.png', '_3x.png')
+
+        console.log(elImgSrc)
+    }())
 }
+
