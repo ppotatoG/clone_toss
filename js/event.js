@@ -91,13 +91,14 @@ for(let i = 0; i < mNum.length; i++){
 }
 
 const elImg = document.querySelectorAll('img')
-const png = 'png';
-
-console.log(elImg[0].src)
-
 
 for(let i = 0; i < elImg.length; i++){
-    (function(){
-        elImg[i].src = elImg[i].src.replace('.png', '_3x.png')
-    }())
+    try{
+        (function(){
+            elImg[i].src = elImg[i].src.replace('.png', '_3x.png')
+        }())
+    } catch (err) {
+        false
+    }
+    
 }
