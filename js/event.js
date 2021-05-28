@@ -93,16 +93,6 @@ for(let i = 0; i < mNum.length; i++){
 const elImg = document.querySelectorAll('img')
 
 for(let i = 0; i < elImg.length; i++){
-<<<<<<< HEAD
-    try{
-        (function(){
-            elImg[i].src = elImg[i].src.replace('.png', '_3x.png')
-        }())
-    } catch (err) {
-        false
-    }
-    
-=======
     if(elImg[i].src.indexOf('_1x') > -1) {
         elImg[i].src = elImg[i].src.replace('_1x.png', '_3x.png')
 
@@ -113,5 +103,4 @@ for(let i = 0; i < elImg.length; i++){
     elImg[i].addEventListener('error', function(){
         elImg[i].src = elImg[i].src.replace('_3x.png', '.png')
     })
->>>>>>> 426378c123ed99284782cf7af95547a71594669b
 }
