@@ -275,7 +275,7 @@ section {
         } 
     }
     p {
-        margin-top: 4rem;
+        margin: 4rem 0;
         span {
             font-size: 3rem;
             span {display: inline-block;}
@@ -411,27 +411,27 @@ section[data-tab="true"] {
     }
 }
 
-#toss-pay .video-wrap {
-    overflow: hidden; 
-    width: 80%; 
-    margin: 0 auto; 
-    position: relative; 
-    height: 410px;
-    margin: 5rem 0;
-    img {
-        width: 364px;
-        position: absolute;
-        top: 5px;
-        left: 22px;
-        z-index: 1;
+#toss-pay {
+    .video-wrap {
+        overflow: hidden; 
+        width: 80%; 
+        margin: 0 auto; 
+        position: relative; 
+        height: 75vw;
+        margin: 2rem 0 5rem;
+        img {
+            width: 100%;
+            position: absolute;
+            top: -10vw;
+            left: 0;
+            z-index: 1;
+        }
+        video{
+            width: 43vw;
+            margin: 2vw 0 0 -2vw;
+        }
     }
-    video{
-        position: absolute;
-        top: 61px;
-        left: -1px;
-        width: 100%;
-        height: 100%;
-    }
+    > *:last-child{margin-top: 5vw;}
 }
 
 #card .wrap {
@@ -445,7 +445,7 @@ section[data-tab="true"] {
         width: 60%;
         margin: 2rem auto 0;
         border-radius: 15px;
-        padding: 2rem 4rem; 
+        padding: 1rem 2rem; 
         box: {
             sizing: border-box;
             shadow: 0px 4px 26px rgba(0, 0, 0, .1);
@@ -517,6 +517,7 @@ section[data-tab="true"] {
 		@content;
 	}
 }
+
 @include tablet{
     header { 
         .wrap {
@@ -716,8 +717,26 @@ section[data-tab="true"] {
 
     #toss-pay {
         .video-wrap {
-            img {left: calc(50% - 181px);}
+            overflow: hidden;
+            width: 350px;
+            margin: 0 auto;
+            position: relative;
+            height: 500px;
+            margin: 5rem auto;
+            img {
+                width: 570px;
+                position: absolute;
+                top: -70px;
+                left: calc(50% - 280px);
+                z-index: 1;
+            }
+            video{
+                width: 90%;
+                margin: 19px auto 0;
+                display: block;
+            }
         }
+        figure + figure {width: 700px;}
     }
 
     #inquiry {

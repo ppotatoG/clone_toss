@@ -3,14 +3,13 @@ const sticky = header.offsetTop;
 const MobileCTA = document.querySelector('#mobile-cta');
 
 function headerFunction() {
-
     if (window.pageYOffset > sticky) {
         header.classList.add("fix");
-        MobileCTA.style.bottom=0+"px";
+        MobileCTA.style.bottom="0px";
 
     } else {
         header.classList.remove("fix");
-        MobileCTA.style.bottom=60+"px";
+        MobileCTA.style.bottom="4%";
     }
 }
 
