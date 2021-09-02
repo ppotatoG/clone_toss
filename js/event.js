@@ -1,60 +1,61 @@
-const header = document.querySelector("header");
-const sticky = header.offsetTop;
-const MobileCTA = document.querySelector('#mobile-cta');
+headerFnc();
+responsive();
+window.addEventListener('scroll', headerFnc);
+window.addEventListener('resize', responsive);
 
-function headerFunction() {
+function headerFnc(){
+    const header = document.querySelector('header');
+    const sticky = header.offsetTop;
+    const MobileCTA = document.querySelector('#mobile-cta');
+
     if (window.pageYOffset > sticky) {
-        header.classList.add("fix");
-        MobileCTA.style.bottom="0px";
+        header.classList.add('fix');
+        MobileCTA.style.bottom = '0px';
 
     } else {
-        header.classList.remove("fix");
-        MobileCTA.style.bottom="4%";
+        header.classList.remove('fix');
+        MobileCTA.style.bottom='4%';
     }
-}
-
-window.addEventListener('scroll', headerFunction)
-window.addEventListener('load', headerFunction)
-
-const imgAreas = document.querySelectorAll('section[data-tab="true"] .img-area');
-const pcPerents = document.querySelectorAll('section[data-tab="true"] .img-box');
-const moPerents = document.querySelectorAll('section[data-tab="true"] .inner');
-const insPoints = document.querySelectorAll('section[data-tab="true"] .tab-btn');
+};
 
 function responsive() {
+    const imgAreas = document.querySelectorAll('section[data-tab="true"] .img-area');
+    const pcPerents = document.querySelectorAll('section[data-tab="true"] .img-box');
+    const moPerents = document.querySelectorAll('section[data-tab="true"] .inner');
+    const insPoints = document.querySelectorAll('section[data-tab="true"] .tab-btn');
+
     const tossCardImg = document.querySelector('#toss-card figure img');
 
     if(window.innerWidth>786) {
-        tossCardImg.src="images/tosscard-plcc-desktop.png";
-        for(let i = 0; i < imgAreas.length; i++){
-            pcPerents[i].insertBefore(imgAreas[i], null);
-        }
+        tossCardImg.src = 'images/tosscard-plcc-desktop.png';
+        pcPerents.forEach((pcPerent, i) => {
+            pcPerent.insertBefore(imgAreas[i], null);
+        })
 
     }else {
-        tossCardImg.src="images/tosscard-plcc-mobile.png";
-        for(let i = 0; i < imgAreas.length; i++){
-            moPerents[i].insertBefore(imgAreas[i], insPoints[i]);
-        }
+        tossCardImg.src='images/tosscard-plcc-mobile.png';
+        moPerents.forEach((moPerent, i) => {
+            moPerent.insertBefore(imgAreas[i], insPoints[i]);            
+        })
     }
-}
-window.addEventListener('resize', responsive)
-window.addEventListener('load', responsive)
+};
 
-const menuBtn=document.querySelector('.menu-toggle');
+const menuBtn = document.querySelector('.menu-toggle');
 
 menuBtn.addEventListener('click', function(){
     this.classList.toggle('on');
 
     if(this.classList.contains('on')) {
-        header.classList.add("fix");
+        header.classList.add('fix');
         this.classList.add('toggle02');
         this.classList.remove('toggle03');
+
     } else {
-        header.classList.remove("fix");
+        header.classList.remove('fix');
         this.classList.remove('toggle02');
         this.classList.add('toggle03');
     }
-})
+});
 
 function tabFnc(e){
     const parent = e.parentNode.parentNode.parentNode.parentNode;
@@ -64,8 +65,8 @@ function tabFnc(e){
     const tabMsgs = parent.querySelectorAll('.tab-message');
 
     const dataTab = e.dataset.tabName;
-    const dataSelect = parent.querySelector('.'+dataTab);
-    const dataSelectMsg = parent.querySelector('.'+dataTab+'-msg');
+    const dataSelect = parent.querySelector('.' + dataTab);
+    const dataSelectMsg = parent.querySelector('.' + dataTab + '-msg');
 
     for(let tabImg of tabImgs){
         tabImg.classList.remove('on');
@@ -80,14 +81,16 @@ function tabFnc(e){
     e.classList.add('on');
     dataSelect.classList.add('on');
     dataSelectMsg.classList.add('on');
-}
+};
 
-const mNum = document.querySelectorAll('.money');
+const moneys = document.querySelectorAll('.money');
 
-for(let i = 0; i < mNum.length; i++){
-    chngMNum = mNum[i].textContent.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
-    mNum[i].textContent = chngMNum+"원";
-}
+moneys.forEach((money) => {
+    chngMNum = money.textContent.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
+    money.textContent = chngMNum+'원';
+});
+
+const elImgs = document.querySelectorAll('img');
 
 const elImg = document.querySelectorAll('img');
 
