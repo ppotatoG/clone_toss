@@ -26,7 +26,7 @@ function responsive() {
 
     const tossCardImg = document.querySelector('#toss-card figure img');
 
-    if(window.innerWidth>786) {
+    if(window.innerWidth > 786) {
         tossCardImg.src = 'images/tosscard-plcc-desktop.png';
         pcPerents.forEach((pcPerent, i) => {
             pcPerent.insertBefore(imgAreas[i], null);
@@ -92,17 +92,15 @@ moneys.forEach((money) => {
 
 const elImgs = document.querySelectorAll('img');
 
-const elImg = document.querySelectorAll('img');
-
-for(let i = 0; i < elImg.length; i++){
-    if(elImg[i].src.indexOf('_1x') > -1) {;
-        elImg[i].src = elImg[i].src.replace('_1x.png', '_3x.png');
-
-    } else{
-        elImg[i].src = elImg[i].src.replace('.png', '_3x.png');
+elImgs.forEach((elImg) => {
+    if(window.innerWidth > 786) {
+        if(elImg.src.indexOf('_1x') > -1) {
+            elImg.src = elImg.src.replace('_1x.png', '_3x.png');
+        }else if(elImg.src.indexOf('.png') > -1) {
+            elImg.src = elImg.src.replace('.png', '_3x.png');
+        }
     }
-
-    elImg[i].addEventListener('error', function(){
-        elImg[i].src = elImg[i].src.replace('_3x.png', '.png');
+    elImg.addEventListener('error', function(){
+        elImg.src = elImg.src.replace('_3x.png', '.png');
     })
-}
+})
