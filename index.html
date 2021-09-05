@@ -333,6 +333,15 @@
             </div>
         </footer>
     </div>
+    <script>
+const agent = navigator.userAgent.toLowerCase();
+
+if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+    alert("인터넷 익스플로러 브라우저 입니다."); 
+    window.location = "microsoft-edge:" + 'https://ppotatog.github.io/clone_toss/';
+    location.href = 'https://support.microsoft.com/ko-kr/topic/%EC%9D%B4-%EC%9B%B9-%EC%82%AC%EC%9D%B4%ED%8A%B8%EB%8A%94-microsoft-edge%EC%97%90%EC%84%9C-%EB%8D%94-%EC%9E%98-%EC%9E%91%EB%8F%99%ED%95%A9%EB%8B%88%EB%8B%A4-160fa918-d581-4932-9e4e-1075c4713595?ui=ko-kr&rs=ko-kr&ad=kr';
+}
+    </script>
     <script src="js/event.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ppotatoG/sa/js/sa.js"></script>
 
