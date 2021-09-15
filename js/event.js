@@ -58,13 +58,13 @@ menuBtn.addEventListener('click', function(){
 });
 
 function tabFnc(e){
-    const parent = e.parentNode.parentNode.parentNode.parentNode;
+    const parent = e.parentNode.parentNode.parentNode.parentNode.parentNode;
 
     const tabImgs = parent.querySelectorAll('.inner-contents img');
     const tabBtns = parent.querySelectorAll('ul li');
     const tabMsgs = parent.querySelectorAll('.tab-message');
 
-    const dataTab = e.dataset.tabName;
+    const dataTab = e.parentNode.dataset.tabName;
     const dataSelect = parent.querySelector('.' + dataTab);
     const dataSelectMsg = parent.querySelector('.' + dataTab + '-msg');
 
@@ -78,7 +78,7 @@ function tabFnc(e){
         tabMsg.classList.remove('on');
     }
 
-    e.classList.add('on');
+    e.parentNode.classList.add('on');
     dataSelect.classList.add('on');
     dataSelectMsg.classList.add('on');
 };
