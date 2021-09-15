@@ -5,10 +5,9 @@ window.addEventListener('resize', responsive);
 
 function headerFnc(){
     const header = document.querySelector('header');
-    const sticky = header.offsetTop;
     const MobileCTA = document.querySelector('#mobile-cta');
 
-    if (window.pageYOffset > sticky) {
+    if ((window.pageYOffset || document.documentElement.scrollTop) > header.getBoundingClientRect().top) {
         header.classList.add('fix');
         MobileCTA.style.bottom = '0px';
 
