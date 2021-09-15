@@ -39,3 +39,11 @@
 - Fix html, IE block
 
 </details>
+
+<details>
+<summary>0915</summary>
+
+- Fix click error, change element(li => a)
+- Fix scroll error, change method
+
+</details>
