@@ -1,6 +1,7 @@
 headerFnc();
 responsive();
 window.addEventListener('scroll', headerFnc);
+window.addEventListener('touchmove', headerFnc);
 window.addEventListener('resize', responsive);
 
 function headerFnc(){
